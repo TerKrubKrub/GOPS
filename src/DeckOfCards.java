@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import javafx.scene.image.Image;
 
@@ -8,7 +9,7 @@ public class DeckOfCards {
 
     public DeckOfCards(ArrayList<Card> deck) {
         this.deck = deck;
-        backOfCardImage = new Image("backOfCard.png");
+        backOfCardImage = new Image("images/backOfCard.png");
     }
 
     public DeckOfCards(){
@@ -22,7 +23,7 @@ public class DeckOfCards {
                 deck.add(new Card(faceName,suit));
             }
         }
-        backOfCardImage = new Image("backOfCard.png");
+        backOfCardImage = new Image("images/backOfCard.png");
     }
 
     public ArrayList<Card> getDeck() {
@@ -39,5 +40,22 @@ public class DeckOfCards {
 
     public void setBackOfCardImage(Image backOfCardImage) {
         this.backOfCardImage = backOfCardImage;
+    }
+
+    /**
+     * This Fuck you
+     */
+    public Card dealTopCard(){
+        if(deck.size()>0)
+            return deck.remove(0);
+        else
+            return null;
+    }
+
+    /**
+     * This method will shuffle the deck of cards
+     */
+    public void shuffle(){
+        Collections.shuffle(deck);
     }
 }

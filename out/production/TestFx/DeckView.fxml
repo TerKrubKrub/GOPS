@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DeckViewController">
+<AnchorPane prefHeight="791.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DeckViewController">
    <children>
-      <HBox layoutX="53.0" layoutY="26.0" spacing="20.0">
+      <HBox layoutX="53.0" layoutY="26.0" prefHeight="754.0" prefWidth="960.0" spacing="20.0">
          <children>
-            <ImageView fx:id="deckImageView" fitHeight="349.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="activeCardImageView" fitHeight="349.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="deckImageView" fitHeight="160.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets top="180.0" />
+               </HBox.margin></ImageView>
+            <ImageView fx:id="activeCardImageView" fitHeight="160.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" top="180.0" />
+               </HBox.margin></ImageView>
             <StackPane>
                <children>
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Next Card" textAlignment="CENTER">
+                  <Button fx:id="nextCardButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#nextCardButtonPushed" text="Next Card" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>

@@ -10,6 +10,8 @@ public class Card {
     public Card(String faceName, String suit) {
         setFaceName(faceName);
         setSuit(suit);
+        String fileName = faceName + "_of_"+suit+".png";
+        image = new Image("images/"+fileName);
     }
 
     public String getFaceName() {
