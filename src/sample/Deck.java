@@ -1,2 +1,41 @@
-package sample;public class Deck {
+package sample;
+
+import java.util.Random;
+
+public class Deck {
+    private Card[] cards;
+    private int cardsInDeck;
+
+    public Deck(){
+        cards = new Card[30];
+    }
+
+    public void reset(){
+        Card.Color[] color = Card.Color.values();
+        cardsInDeck = 0;
+        for(int i = 0; i < Card.Color.values().length; i++){
+            cards[cardsInDeck++] = new Card(color[i], Card.Value.getValue(0));
+
+            for(int j = 1; j < 10; j++){
+                cards[cardsInDeck++] = new Card(color[i], Card.Value.getValue(j));
+            }
+        }
+    }
+
+    public boolean isEmpty(){
+        return cardsInDeck == 0;
+    }
+
+    public void shuffle(){
+        int n = cards.length;
+        Random random = new Random();
+
+        for(int i = 0; i < cards.length; i++){
+            // Get a random index of the array
+            // Swap the random element
+
+            int randomValue = i + random.nextInt(n - 1);
+            Card randomCard = cards[randomValue];
+        }
+    }
 }
