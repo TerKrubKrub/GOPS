@@ -34,8 +34,10 @@ public class Deck {
             // Get a random index of the array
             // Swap the random element
 
-            int randomValue = i + random.nextInt(n - 1);
+            int randomValue = i + random.nextInt(n - i);
             Card randomCard = cards[randomValue];
+            cards[randomValue] = cards[i];
+            cards[i] = randomCard;
         }
     }
 }
