@@ -40,4 +40,19 @@ public class Deck {
             cards[i] = randomCard;
         }
     }
+
+    public Card drawCard() throws IllegalAccessException{
+        if(isEmpty()){
+          throw new IllegalAccessException("No card in the deck");
+        }
+        return cards[--cardsInDeck];
+    }
+
+    public Card[] drawCard(int n) throws IllegalAccessException{
+        Card[] ret = new Card[n];
+        for(int i = 0; i < n; i++){
+            ret[i] = cards[--cardsInDeck];
+        }
+        return ret;
+    }
 }
