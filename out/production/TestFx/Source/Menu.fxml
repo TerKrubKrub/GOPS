@@ -8,52 +8,63 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Source.Controller">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Source.Controller">
     <children>
         <ImageView fitHeight="700.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../Resource/menu.png" />
+            <Image url="@../Resource/menu.png"/>
         </ImageView>
         <VBox alignment="CENTER" layoutX="86.0" layoutY="62.0" minHeight="350.0" prefHeight="575.0" prefWidth="250.0">
-            <Button fx:id="startButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#pressStart" prefHeight="120.0" prefWidth="200.0" stylesheets="@Style.css" text="Start" textFill="WHITE" textOverrun="CLIP">
+            <Button fx:id="startButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false"
+                    onAction="#pressStart" prefHeight="120.0" prefWidth="200.0" stylesheets="@Style.css" text="Start"
+                    textFill="WHITE" textOverrun="CLIP">
                 <VBox.margin>
-                    <Insets bottom="25.0" />
+                    <Insets bottom="25.0"/>
                 </VBox.margin>
                 <font>
-                    <Font name="Arial Rounded MT Bold" size="40.0" />
+                    <Font name="Arial Rounded MT Bold" size="40.0"/>
                 </font>
             </Button>
-            <Button fx:id="tutorialButton" mnemonicParsing="false" onAction="#pressTutorial" prefHeight="80.0" prefWidth="200.0" stylesheets="@Style.css" text="Tutorial" textFill="WHITE">
+            <Button fx:id="tutorialButton" mnemonicParsing="false" onAction="#pressTutorial" prefHeight="80.0"
+                    prefWidth="200.0" stylesheets="@Style.css" text="Tutorial" textFill="WHITE">
                 <VBox.margin>
-                    <Insets bottom="25.0" />
+                    <Insets bottom="25.0"/>
                 </VBox.margin>
                 <font>
-                    <Font name="Arial Rounded MT Bold" size="30.0" />
+                    <Font name="Arial Rounded MT Bold" size="30.0"/>
                 </font>
             </Button>
-            <Button fx:id="scoreButton" mnemonicParsing="false" onAction="#pressScore" prefHeight="80.0" prefWidth="200.0" stylesheets="@Style.css" text="Score" textFill="WHITE">
+            <Button fx:id="scoreButton" mnemonicParsing="false" onAction="#pressScore" prefHeight="80.0"
+                    prefWidth="200.0" stylesheets="@Style.css" text="Score" textFill="WHITE">
                 <VBox.margin>
-                    <Insets bottom="25.0" />
+                    <Insets bottom="25.0"/>
                 </VBox.margin>
                 <font>
-                    <Font name="Arial Rounded MT Bold" size="30.0" />
+                    <Font name="Arial Rounded MT Bold" size="30.0"/>
                 </font>
             </Button>
-            <Button fx:id="aboutButton" mnemonicParsing="false" onAction="#pressAbout" prefHeight="80.0" prefWidth="200.0" stylesheets="@Style.css" text="About" textFill="WHITE">
+            <Button fx:id="aboutButton" mnemonicParsing="false" onAction="#pressAbout" prefHeight="80.0"
+                    prefWidth="200.0" stylesheets="@Style.css" text="About" textFill="WHITE">
                 <VBox.margin>
-                    <Insets bottom="25.0" />
+                    <Insets bottom="25.0"/>
                 </VBox.margin>
                 <font>
-                    <Font name="Arial Rounded MT Bold" size="30.0" />
+                    <Font name="Arial Rounded MT Bold" size="30.0"/>
                 </font>
             </Button>
-            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#pressExit" prefHeight="80.0" prefWidth="200.0" stylesheets="@Style.css" text="Exit" textFill="WHITE">
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#pressClose" prefHeight="80.0"
+                    prefWidth="200.0" stylesheets="@Style.css" text="Exit" textFill="WHITE">
                 <VBox.margin>
-                    <Insets />
+                    <Insets/>
                 </VBox.margin>
                 <font>
-                    <Font name="Arial Rounded MT Bold" size="30.0" />
+                    <Font name="Arial Rounded MT Bold" size="30.0"/>
                 </font>
             </Button>
         </VBox>
+        <Button fx:id="minimizeButton" layoutX="912.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressMinimize"
+                prefWidth="25.0" rotate="15.0" stylesheets="@Style.css"/>
+        <Button fx:id="closeButton" layoutX="952.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressClose"
+                prefHeight="25.0" prefWidth="25.0" rotate="15.0" stylesheets="@Style.css"/>
     </children>
 </AnchorPane>
