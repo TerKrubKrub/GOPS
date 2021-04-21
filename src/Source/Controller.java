@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 import java.io.*;
 import java.net.URL;
 import java.util.Objects;
@@ -77,6 +78,9 @@ public class Controller implements Initializable {
     public void pressClose() {
         Stage window = (Stage) closeButton.getScene().getWindow();
         window.close();
+        if (exitButton.isPressed() || closeButton.isPressed()) {
+            System.out.println("Exit");
+        }
     }
 
     public void pressMinimize() {
@@ -93,6 +97,9 @@ public class Controller implements Initializable {
 
         FileOutputStream fos = new FileOutputStream(file);
         DataOutputStream savedName = new DataOutputStream(fos);
+        if (textFPlayerName.getText().equals("")) {
+            textFPlayerName.setText("Unnamed");
+        }
         savedName.writeUTF(textFPlayerName.getText());
         System.out.println(textFPlayerName.getText());
 
