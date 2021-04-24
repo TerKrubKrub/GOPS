@@ -21,7 +21,7 @@
             <Font name="Broadway" size="40.0"/>
         </font>
     </Label>
-    <Button fx:id="backButton" layoutX="343.0" layoutY="483.0" mnemonicParsing="false" onAction="#pressBack"
+    <Button fx:id="backButton" layoutX="343.0" layoutY="483.0" mnemonicParsing="false" onAction="#pressBackButton"
             prefHeight="50.0" prefWidth="129.0" stylesheets="@Style.css" text="Back" textFill="WHITE">
         <font>
             <Font name="Arial Rounded MT Bold" size="20.0"/>
@@ -29,14 +29,14 @@
     </Button>
     <ChoiceBox fx:id="botSelection" layoutX="431.0" layoutY="373.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0"
                prefWidth="137.0" stylesheets="@Style.css"/>
-    <Button fx:id="doneButton" layoutX="527.0" layoutY="483.0" mnemonicParsing="false" onAction="#pressDone"
+    <Button fx:id="doneButton" layoutX="527.0" layoutY="483.0" mnemonicParsing="false" onAction="#pressDoneButton"
             prefHeight="50.0" prefWidth="129.0" stylesheets="@Style.css" text="Done" textFill="WHITE">
         <font>
             <Font name="Arial Rounded MT Bold" size="20.0"/>
         </font>
     </Button>
-    <Button fx:id="minimizeButton" layoutX="912.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressMinimize"
+    <Button fx:id="minimizeButton" layoutX="912.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressMinimizeButton"
             prefHeight="25.0" prefWidth="25.0" rotate="15.0" stylesheets="@Style.css"/>
-    <Button fx:id="closeButton" layoutX="952.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressClose"
+    <Button fx:id="closeButton" layoutX="952.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressCloseButton"
             prefHeight="25.0" prefWidth="25.0" rotate="15.0" stylesheets="@Style.css"/>
 </AnchorPane>

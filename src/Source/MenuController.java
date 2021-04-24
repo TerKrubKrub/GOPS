@@ -34,45 +34,45 @@ public class MenuController extends Main implements Initializable {
         botSelection.setValue("1 Bot");
     }
 
-    public void pressStart() throws IOException {
+    public void pressStartButton() throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Preference.fxml")));
         Stage window = (Stage) startButton.getScene().getWindow();
         moveStage(root, window);
         window.setScene(new Scene(root));
     }
 
-    public void pressTutorial() throws IOException {
+    public void pressTutorialButton() throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Tutorial.fxml")));
         Stage window = (Stage) tutorialButton.getScene().getWindow();
         moveStage(root, window);
         window.setScene(new Scene(root));
     }
 
-    public void pressScore() throws IOException {
+    public void pressScoreButton() throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Score.fxml")));
         Stage window = (Stage) scoreButton.getScene().getWindow();
         moveStage(root, window);
         window.setScene(new Scene(root));
     }
 
-    public void pressAbout() throws IOException {
+    public void pressAboutButton() throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("About.fxml")));
         Stage window = (Stage) aboutButton.getScene().getWindow();
         moveStage(root, window);
         window.setScene(new Scene(root));
     }
 
-    public void pressClose() {
+    public void pressCloseButton() {
         Stage window = (Stage) closeButton.getScene().getWindow();
         window.close();
     }
 
-    public void pressMinimize() {
+    public void pressMinimizeButton() {
         Stage window = (Stage) minimizeButton.getScene().getWindow();
         window.setIconified(true);
     }
 
-    public void pressDone() throws IOException {
+    public void pressDoneButton() throws IOException {
         switch (botSelection.getValue()) {
             case "1 Bot" -> System.out.println("1 Bot");
             case "2 Bots" -> System.out.println("2 Bots");
@@ -93,7 +93,7 @@ public class MenuController extends Main implements Initializable {
 //        window.setScene(new Scene(root));
     }
 
-    public void pressBack() throws IOException {
+    public void pressBackButton() throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));
         Stage window = (Stage) backButton.getScene().getWindow();
         moveStage(root, window);
