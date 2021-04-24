@@ -15,13 +15,14 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class MenuController extends Main implements Initializable {
 
     @FXML
     private Button startButton, tutorialButton, scoreButton, aboutButton, exitButton,
             doneButton, backButton, minimizeButton, closeButton;
     @FXML
     private ChoiceBox<String> botSelection = new ChoiceBox<>();
+
     @FXML
     private TextField textFPlayerName;
     private File file;
@@ -33,54 +34,37 @@ public class Controller implements Initializable {
         botSelection.setValue("1 Bot");
     }
 
-    public void moveWindow(Parent root, Stage window) {
-        final double[] xOffset = {0};
-        final double[] yOffset = {0};
-
-        root.setOnMousePressed(event -> {
-            xOffset[0] = event.getSceneX();
-            yOffset[0] = event.getSceneY();
-        });
-        root.setOnMouseDragged(event -> {
-            window.setX(event.getScreenX() - xOffset[0]);
-            window.setY(event.getScreenY() - yOffset[0]);
-        });
-    }
-
     public void pressStart() throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PreGame.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Preference.fxml")));
         Stage window = (Stage) startButton.getScene().getWindow();
-        moveWindow(root, window);
+        moveStage(root, window);
         window.setScene(new Scene(root));
     }
 
     public void pressTutorial() throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Tutorial.fxml")));
         Stage window = (Stage) tutorialButton.getScene().getWindow();
-        moveWindow(root, window);
+        moveStage(root, window);
         window.setScene(new Scene(root));
     }
 
     public void pressScore() throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Score.fxml")));
         Stage window = (Stage) scoreButton.getScene().getWindow();
-        moveWindow(root, window);
+        moveStage(root, window);
         window.setScene(new Scene(root));
     }
 
     public void pressAbout() throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("About.fxml")));
         Stage window = (Stage) aboutButton.getScene().getWindow();
-        moveWindow(root, window);
+        moveStage(root, window);
         window.setScene(new Scene(root));
     }
 
     public void pressClose() {
         Stage window = (Stage) closeButton.getScene().getWindow();
         window.close();
-        if (exitButton.isPressed() || closeButton.isPressed()) {
-            System.out.println("Exit");
-        }
     }
 
     public void pressMinimize() {
@@ -104,7 +88,7 @@ public class Controller implements Initializable {
         System.out.println(textFPlayerName.getText());
 
 //        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(".fxml")));
-//        Stage window = (Stage) preGameDoneButton.getScene().getWindow();
+//        Stage window = (Stage) doneButton.getScene().getWindow();
 //        moveWindow(root, window);
 //        window.setScene(new Scene(root));
     }
@@ -112,7 +96,7 @@ public class Controller implements Initializable {
     public void pressBack() throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));
         Stage window = (Stage) backButton.getScene().getWindow();
-        moveWindow(root, window);
+        moveStage(root, window);
         window.setScene(new Scene(root));
     }
 }
