@@ -4,99 +4,104 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="startBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <VBox layoutX="5.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select0" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select0" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="175.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="90.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="260.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select3" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select3" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="345.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select4" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select4" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="430.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select5" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select5" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="515.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select6" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select6" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="600.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select7" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select7" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="685.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select8" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select8" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="770.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select9" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select9" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="855.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select10" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select10" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="940.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select11" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select11" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="1025.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select12" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select12" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="1110.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select13" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select13" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
       <VBox layoutX="1195.0" layoutY="506.0" prefHeight="200.0" prefWidth="80.0">
          <children>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="select14" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Select" />
+            <Button fx:id="select14" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCard" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
+      <Button fx:id="startBtn" layoutX="530.0" layoutY="313.0" mnemonicParsing="false" onAction="#startGame" prefHeight="94.0" prefWidth="221.0" text="START">
+         <font>
+            <Font name="Ebrima" size="30.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -8,6 +8,7 @@ public class Player {
     protected int betMoney;
     protected boolean playerTurn;
     protected int score;
+    protected int betScore;
 
     public Player() {
         initPlayer();
@@ -18,6 +19,8 @@ public class Player {
         this.betMoney = 0;
         this.playerTurn = false;
         this.score = 0;
+        this.betScore = 0;
+        this.hand = new ArrayList<Card>();
     }
 
     public int getMoney() {
@@ -43,5 +46,13 @@ public class Player {
     public void bet(int amount) {
         this.betMoney += amount;
         this.money -= amount;
+    }
+
+    public int getBetScore() {
+        return this.betScore;
+    }
+
+    public void setBetScore(int amount) {
+        this.betScore = amount;
     }
 }
