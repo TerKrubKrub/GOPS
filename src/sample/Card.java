@@ -1,8 +1,11 @@
 package sample;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
 public class Card {
     enum Color{
-        Red, Blue, Green;
+        red, blue, green;
         private static final Color[] colors = Color.values();
         public static Color getColor(int i) {
             return Color.colors[i];
@@ -18,7 +21,7 @@ public class Card {
             this.score = score;
         }
         private static final Value[] values = Value.values();
-        public static Value getValue(int i){
+        public static Value getValue(int i) {
             return Value.values[i];
         }
 
@@ -26,10 +29,14 @@ public class Card {
 
     private final Color color;
     private final Value value;
+    private final Image img;
+    private ImageView imgView;
 
-    public Card(final Color color, final Value value){
+    public Card(final Color color, final Value value, final Image img) {
         this.color = color;
         this.value = value;
+        this.img = img;
+
     }
 
     public Color getColor(){
@@ -42,6 +49,14 @@ public class Card {
 
     public int getScore(){
         return this.value.score;
+    }
+
+    public Image getImage() {
+        return this.img;
+    }
+
+    public ImageView getImgView() {
+        return this.imgView;
     }
 
     @Override

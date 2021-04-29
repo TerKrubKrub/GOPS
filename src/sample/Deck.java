@@ -7,26 +7,34 @@ import javafx.scene.image.ImageView;
 public class Deck {
     private Card[] cards;
     private int cardsInDeck;
+    private Image[] img;
 
-    public Deck(){
-        cards = new Card[45];
+    public Deck() {
+        initVariable();
     }
 
-    public void reset(){
+    public void initVariable() {
+        cards = new Card[45];
+        img = new Image[45];
+    }
+
+    public void reset() {
         Card.Color[] color = Card.Color.values();
         cardsInDeck = 0;
         for(int i = 0; i < Card.Color.values().length; i++){
             for(int j = 1; j <= 15; j++){
-                cards[cardsInDeck++] = new Card(color[i], Card.Value.getValue(j));
+                img[cardsInDeck] = new Image("./Resource/Card/" + color[i] + "_" + j + ".png");
+                cards[cardsInDeck] = new Card(color[i], Card.Value.getValue(j), img[cardsInDeck]);
+                cardsInDeck++;
             }
         }
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return cardsInDeck == 0;
     }
 
-    public void shuffle(){
+    public void shuffle() {
         int n = cards.length;
         Random random = new Random();
 
@@ -41,7 +49,7 @@ public class Deck {
         }
     }
 
-    public Card drawCard() throws IllegalAccessException{
+    public Card drawCard() throws IllegalAccessException {
         if(isEmpty()){
           throw new IllegalAccessException("No card in the deck");
         }

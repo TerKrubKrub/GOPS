@@ -16,6 +16,8 @@ public class Main extends Application {
         primaryStage.setTitle("Card Game");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        Card.Color[] colors = Card.Color.values();
+        System.out.println(colors[0]);
     }
 
 
