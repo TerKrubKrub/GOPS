@@ -7,16 +7,14 @@ public class Deck {
     private int cardsInDeck;
 
     public Deck(){
-        cards = new Card[30];
+        cards = new Card[45];
     }
 
     public void reset(){
         Card.Color[] color = Card.Color.values();
         cardsInDeck = 0;
         for(int i = 0; i < Card.Color.values().length; i++){
-            cards[cardsInDeck++] = new Card(color[i], Card.Value.getValue(0));
-
-            for(int j = 1; j < 10; j++){
+            for(int j = 1; j <= 15; j++){
                 cards[cardsInDeck++] = new Card(color[i], Card.Value.getValue(j));
             }
         }
@@ -48,11 +46,15 @@ public class Deck {
         return cards[--cardsInDeck];
     }
 
-    public Card[] drawCard(int n) throws IllegalAccessException{
-        Card[] ret = new Card[n];
-        for(int i = 0; i < n; i++){
-            ret[i] = cards[--cardsInDeck];
-        }
-        return ret;
+//    public Card[] drawCard(int n) throws IllegalAccessException{
+//        Card[] ret = new Card[n];
+//        for(int i = 0; i < n; i++){
+//            ret[i] = cards[--cardsInDeck];
+//        }
+//        return ret;
+//    }
+
+    public Card[] getCards() {
+        return cards;
     }
 }
