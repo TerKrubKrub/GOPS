@@ -18,7 +18,8 @@ public class Controller implements Initializable {
     private Enemy bot;
 
     private int mostBet;
-    private int indexBattleCard;
+    private int indexSelectedCard;
+    private int totalBet;
 
     @FXML
     private ImageView card0, card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14, selectedCardView, battleCardView,
@@ -30,7 +31,9 @@ public class Controller implements Initializable {
     private ArrayList<ImageView> imgList, imgBotList;
     private Image selectedCard, backCard;
 
-    private boolean checkSelect;
+    private boolean checkSelected;
+
+    private Button selectedBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -38,6 +41,31 @@ public class Controller implements Initializable {
         initCardImageView();
         deck.reset();
         deck.shuffle();
+    }
+
+    public void battle() {
+        if(user.betPoint > bot.betPoint) {
+            user.money += totalBet;
+        }
+        else if(user.betPoint < bot.betPoint) {
+            bot.money += totalBet;
+        }
+        else {
+            user.money += user.betMoney;
+            bot.money += bot.betMoney;
+        }
+    }
+
+    public void battleBtn() {
+        battle();
+        battleReset();
+    }
+
+    public void battleReset() {
+        user.betMoney = 0;
+        bot.betMoney = 0;
+        totalBet = 0;
+
     }
 
     public void draw() throws IllegalAccessException {
@@ -57,7 +85,7 @@ public class Controller implements Initializable {
         user = new User("Copter");
         bot = new Enemy();
         mostBet = 100;
-        checkSelect = false;
+        checkSelected = false;
         backCard = new Image("Resource/Card/back.png");
         selectedCardView.setVisible(false);
         drawBtn.setVisible(false);
@@ -154,31 +182,34 @@ public class Controller implements Initializable {
         imgView.setVisible(false);
     }
 
-    public void selectBet(ActionEvent e) {
+    public void selectBetBtn(ActionEvent e) {
         String id = ((Button)e.getSource()).getId();
         if(user.getMoney() >= getAmountBetFromBtn(id)) {
             user.bet(getAmountBetFromBtn(id));
+            totalBet += getAmountBetFromBtn(id);
             System.out.println(user.getBetMoney());
         }
         else System.out.println("Can't bet more than your money!!!");
     }
 
-    public void selectCard(ActionEvent e) {
-        if(!checkSelect) {
+    public void selectCardBtn(ActionEvent e) {
+        if(!checkSelected) {
             String id = ((Button)e.getSource()).getId();
-            indexBattleCard = getObjectFromBtn(id);
+            indexSelectedCard = getObjectFromBtn(id);
             user.setBetPoint(getValueFromCard(id));
             System.out.println(getValueFromCard(id));
             selectedCard = getImageFromCard(id);
             selectedCardView.setImage(backCard);
             renderCard(selectedCardView);
             removeCard(imgList.get(getObjectFromBtn(id)));
-            checkSelect = true;
+            selectedBtn = (Button)e.getSource();
+            selectedBtn.setVisible(false);
+            checkSelected = true;
         }
         else System.out.println("Can't choose 2 card together");
     }
 
-    public void startGame(ActionEvent e) throws IllegalAccessException {
+    public void startGameBtn(ActionEvent e) throws IllegalAccessException {
         System.out.println("Start!!");
         handOutCards();
         ((Button)e.getSource()).setVisible(false);
@@ -187,17 +218,19 @@ public class Controller implements Initializable {
         undoBtn.setVisible(true);
     }
 
-    public void undo() {
-        if(checkSelect) {
+    public void undoBtn() {
+        if(checkSelected) {
             Image undoCard = selectedCard;
             removeCard(selectedCardView);
             for(int i = 0; i < user.hand.size(); i++) {
-                if(indexBattleCard == i) {
+                if(indexSelectedCard == i) {
                     imgList.get(i).setImage(undoCard);
                     renderCard(imgList.get(i));
                 }
             }
-            checkSelect = false;
+            selectedBtn.setVisible(true);
+            user.betPoint = 0;
+            checkSelected = false;
         }
         else System.out.println("No card on battle");
     }
