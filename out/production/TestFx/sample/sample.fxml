@@ -104,7 +104,7 @@
             <Button fx:id="select14" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select" />
          </children>
       </VBox>
-      <Button fx:id="startBtn" layoutX="530.0" layoutY="313.0" mnemonicParsing="false" onAction="#startGameBtn" opacity="0.0" prefHeight="94.0" prefWidth="221.0" text="START">
+      <Button fx:id="startBtn" layoutX="530.0" layoutY="313.0" mnemonicParsing="false" onAction="#startGameBtn" prefHeight="94.0" prefWidth="221.0" text="START">
          <font>
             <Font name="Ebrima" size="30.0" />
          </font>

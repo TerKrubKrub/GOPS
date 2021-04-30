@@ -26,7 +26,7 @@ public class Controller implements Initializable {
     cardBot0, cardBot1, cardBot2, cardBot3, cardBot4, cardBot5, cardBot6, cardBot7, cardBot8, cardBot9, cardBot10, cardBot11, cardBot12, cardBot13, cardBot14;
 
     @FXML
-    private Button drawBtn, undoBtn;
+    private Button drawBtn, undoBtn, battleBtn;
 
     private ArrayList<ImageView> imgList, imgBotList;
     private Image selectedCard, backCard;
@@ -90,6 +90,7 @@ public class Controller implements Initializable {
         selectedCardView.setVisible(false);
         drawBtn.setVisible(false);
         undoBtn.setVisible(false);
+        battleBtn.setVisible(false);
     }
 
     public void initCardImageView() {
@@ -204,6 +205,7 @@ public class Controller implements Initializable {
             removeCard(imgList.get(getObjectFromBtn(id)));
             selectedBtn = (Button)e.getSource();
             selectedBtn.setVisible(false);
+            undoBtn.setVisible(true);
             checkSelected = true;
         }
         else System.out.println("Can't choose 2 card together");
@@ -215,7 +217,7 @@ public class Controller implements Initializable {
         ((Button)e.getSource()).setVisible(false);
         renderCardImageViewStart();
         drawBtn.setVisible(true);
-        undoBtn.setVisible(true);
+        battleBtn.setVisible(true);
     }
 
     public void undoBtn() {
@@ -229,6 +231,7 @@ public class Controller implements Initializable {
                 }
             }
             selectedBtn.setVisible(true);
+            undoBtn.setVisible(false);
             user.betPoint = 0;
             checkSelected = false;
         }
