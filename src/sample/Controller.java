@@ -165,7 +165,7 @@ public class Controller implements Initializable {
         undoBtn.setVisible(true);
     }
 
-    public void undo(ActionEvent e) {
+    public void undo() {
         if(checkSelect) {
             Image undoCard = selectedCard;
             removeCard(selectedCardView);
