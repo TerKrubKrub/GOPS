@@ -129,5 +129,20 @@
       </VBox>
       <ImageView fx:id="battleCardView" fitHeight="100.0" fitWidth="80.0" layoutX="450.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="drawBtn" alignment="CENTER" contentDisplay="TOP" layoutX="426.0" layoutY="395.0" mnemonicParsing="false" onAction="#draw" prefHeight="32.0" prefWidth="129.0" text="Draw" />
+      <ImageView fx:id="cardBot0" fitHeight="100.0" fitWidth="80.0" layoutX="5.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot1" fitHeight="100.0" fitWidth="80.0" layoutX="90.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot2" fitHeight="100.0" fitWidth="80.0" layoutX="175.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot3" fitHeight="100.0" fitWidth="80.0" layoutX="260.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot4" fitHeight="100.0" fitWidth="80.0" layoutX="345.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot5" fitHeight="100.0" fitWidth="80.0" layoutX="430.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot6" fitHeight="100.0" fitWidth="80.0" layoutX="515.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot7" fitHeight="100.0" fitWidth="80.0" layoutX="600.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot9" fitHeight="100.0" fitWidth="80.0" layoutX="770.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot8" fitHeight="100.0" fitWidth="80.0" layoutX="685.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot10" fitHeight="100.0" fitWidth="80.0" layoutX="855.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot11" fitHeight="100.0" fitWidth="80.0" layoutX="940.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot12" fitHeight="100.0" fitWidth="80.0" layoutX="1025.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot13" fitHeight="100.0" fitWidth="80.0" layoutX="1110.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cardBot14" fitHeight="100.0" fitWidth="80.0" layoutX="1195.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

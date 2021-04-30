@@ -21,12 +21,13 @@ public class Controller implements Initializable {
     private int indexBattleCard;
 
     @FXML
-    private ImageView card0, card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14, deckPoint, selectedCardView, battleCardView;
+    private ImageView card0, card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14, selectedCardView, battleCardView,
+    cardBot0, cardBot1, cardBot2, cardBot3, cardBot4, cardBot5, cardBot6, cardBot7, cardBot8, cardBot9, cardBot10, cardBot11, cardBot12, cardBot13, cardBot14;
 
     @FXML
     private Button drawBtn, undoBtn;
 
-    private ArrayList<ImageView> imgList;
+    private ArrayList<ImageView> imgList, imgBotList;
     private Image selectedCard, backCard;
 
     private boolean checkSelect;
@@ -39,7 +40,7 @@ public class Controller implements Initializable {
         deck.shuffle();
     }
 
-    public void draw(ActionEvent e) throws IllegalAccessException {
+    public void draw() throws IllegalAccessException {
         Card battleCard = deck.drawCard();
         battleCardView.setImage(battleCard.getImage());
     }
@@ -80,6 +81,23 @@ public class Controller implements Initializable {
         imgList.add(card12);
         imgList.add(card13);
         imgList.add(card14);
+
+        imgBotList = new ArrayList<ImageView>();
+        imgBotList.add(cardBot0);
+        imgBotList.add(cardBot1);
+        imgBotList.add(cardBot2);
+        imgBotList.add(cardBot3);
+        imgBotList.add(cardBot4);
+        imgBotList.add(cardBot5);
+        imgBotList.add(cardBot6);
+        imgBotList.add(cardBot7);
+        imgBotList.add(cardBot8);
+        imgBotList.add(cardBot9);
+        imgBotList.add(cardBot10);
+        imgBotList.add(cardBot11);
+        imgBotList.add(cardBot12);
+        imgBotList.add(cardBot13);
+        imgBotList.add(cardBot14);
     }
 
     public int getAmountBetFromBtn(String id) {
@@ -126,6 +144,10 @@ public class Controller implements Initializable {
         for(int i = 0; i < imgList.size(); i++) {
             imgList.get(i).setImage(user.hand.get(i).getImage());
         }
+
+        for(int i = 0; i < imgBotList.size(); i++) {
+            imgBotList.get(i).setImage(backCard);
+        }
     }
 
     public void removeCard(ImageView imgView) {
@@ -145,7 +167,7 @@ public class Controller implements Initializable {
         if(!checkSelect) {
             String id = ((Button)e.getSource()).getId();
             indexBattleCard = getObjectFromBtn(id);
-            user.setBetScore(getValueFromCard(id));
+            user.setBetPoint(getValueFromCard(id));
             System.out.println(getValueFromCard(id));
             selectedCard = getImageFromCard(id);
             selectedCardView.setImage(backCard);
