@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menu.Controller">
+    <ImageView fitHeight="700.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Resource/Background/about.png"/>
+    </ImageView>
+    <Button fx:id="minimizeButton" layoutX="912.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressMinimizeButton"
+            prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css"/>
+    <Button fx:id="closeButton" layoutX="952.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressCloseButton"
+            prefHeight="25.0" prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css"/>
+    <Button fx:id="backButton" layoutX="808.0" layoutY="588.0" mnemonicParsing="false" onAction="#pressBackButton"
+            prefHeight="50.0" prefWidth="129.0" stylesheets="@../File/Style.css" text="Back" textFill="WHITE">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="20.0"/>
+        </font>
+    </Button>
+</AnchorPane>
