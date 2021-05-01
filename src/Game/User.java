@@ -7,6 +7,7 @@ public class User extends Player {
 
     public User(String name) {
         this.name = name;
+        this.playerTurn = false;
     }
 
     public String getName() {

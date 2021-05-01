@@ -23,7 +23,7 @@ public class Main extends Application {
         window.setTitle("GOPS: Shuffled!");
         window.initStyle(StageStyle.TRANSPARENT);
         moveStage(root, window);
-        Image icon = new Image("/Resource/icon.png");
+        Image icon = new Image("/Resource/Icon/card.png");
         window.getIcons().add(icon);
         window.show();
 

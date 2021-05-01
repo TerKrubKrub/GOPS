@@ -17,6 +17,21 @@ public class Deck {
         img = new Image[45];
     }
 
+    public Card drawCard() throws IllegalAccessException {
+        if(isEmpty()){
+            throw new IllegalAccessException("No card in the deck");
+        }
+        return cards[--cardsInDeck];
+    }
+
+    public Card[] getCards() {
+        return cards;
+    }
+
+    public boolean isEmpty() {
+        return cardsInDeck == 0;
+    }
+
     public void reset() {
         Card.Color[] color = Card.Color.values();
         cardsInDeck = 0;
@@ -27,10 +42,6 @@ public class Deck {
                 cardsInDeck++;
             }
         }
-    }
-
-    public boolean isEmpty() {
-        return cardsInDeck == 0;
     }
 
     public void shuffle() {
@@ -46,24 +57,5 @@ public class Deck {
             cards[randomValue] = cards[i];
             cards[i] = randomCard;
         }
-    }
-
-    public Card drawCard() throws IllegalAccessException {
-        if(isEmpty()){
-          throw new IllegalAccessException("No card in the deck");
-        }
-        return cards[--cardsInDeck];
-    }
-
-//    public Card[] drawCard(int n) throws IllegalAccessException{
-//        Card[] ret = new Card[n];
-//        for(int i = 0; i < n; i++){
-//            ret[i] = cards[--cardsInDeck];
-//        }
-//        return ret;
-//    }
-
-    public Card[] getCards() {
-        return cards;
     }
 }

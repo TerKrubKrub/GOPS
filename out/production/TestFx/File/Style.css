@@ -3,11 +3,13 @@
     -fx-background-insets: 0, 0 0 12 0, 0 0 14 0, 0 0 16 0;
     -fx-background-radius: 30;
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #d96e3a, #c54e2c);
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 0, 10);
 }
+
 #startButton:hover {
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
 }
+
 #startButton:pressed {
     -fx-padding: 10 15 13 15;
     -fx-background-insets: 8 0 0 0, 8 0 8 0, 8 0 10 0, 8 0 12 0;
@@ -20,9 +22,11 @@
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #d96e3a, #c54e2c);
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
 }
+
 #tutorialButton:hover {
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
 }
+
 #tutorialButton:pressed {
     -fx-padding: 10 15 13 15;
     -fx-background-insets: 8 0 0 0, 8 0 8 0, 8 0 10 0, 8 0 12 0;
@@ -35,9 +39,11 @@
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #d96e3a, #c54e2c);
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
 }
+
 #scoreButton:hover {
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
 }
+
 #scoreButton:pressed {
     -fx-padding: 10 15 13 15;
     -fx-background-insets: 8 0 0 0, 8 0 8 0, 8 0 10 0, 8 0 12 0;
@@ -50,9 +56,11 @@
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #d96e3a, #c54e2c);
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
 }
+
 #aboutButton:hover {
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
 }
+
 #aboutButton:pressed {
     -fx-padding: 10 15 13 15;
     -fx-background-insets: 8 0 0 0, 8 0 8 0, 8 0 10 0, 8 0 12 0;
@@ -65,9 +73,11 @@
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #d96e3a, #c54e2c);
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
 }
+
 #exitButton:hover {
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
 }
+
 #exitButton:pressed {
     -fx-padding: 10 15 13 15;
     -fx-background-insets: 8 0 0 0, 8 0 8 0, 8 0 10 0, 8 0 12 0;
@@ -77,6 +87,7 @@
     -fx-background-radius: 50;
     -fx-background-color: radial-gradient(center 50% -20%, radius 200%, #b8ee36 45%, #80c800 50%);
 }
+
 #minimizeButton:hover {
     -fx-background-color: radial-gradient(center 50% -20%, radius 200%, #c6e778 45%, #9fdd33 50);
 }
@@ -85,6 +96,7 @@
     -fx-background-radius: 50;
     -fx-background-color: radial-gradient(center 50% -20%, radius 200%, #dd1717 45%, #970000 50%);
 }
+
 #closeButton:hover {
     -fx-background-color: radial-gradient(center 50% -20%, radius 200%, #d85656 45%, #f53a3a 50%);
 }
@@ -96,9 +108,11 @@
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #d96e3a, #c54e2c);
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
 }
+
 #doneButton:hover {
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
 }
+
 #doneButton:pressed {
     -fx-padding: 10 15 13 15;
     -fx-background-insets: 6 0 0 0, 6 0 4 0, 6 0 6 0, 6 0 8 0;
@@ -111,14 +125,284 @@
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #d96e3a, #c54e2c);
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
 }
+
 #backButton:hover {
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100), #9d4024, #d86e3a, radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
 }
+
 #backButton:pressed {
     -fx-padding: 10 15 13 15;
     -fx-background-insets: 6 0 0 0, 6 0 4 0, 6 0 6 0, 6 0 8 0;
 }
 
-#botSelection {
-    -fx-background-color: radial-gradient(center 20% -5%, radius 200%, #ee8d4c 45%, #d4771f 50%);
+#select0 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-delay: 0.2s;
+}
+
+#select0:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -10px;
+}
+
+#select1 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -30px;
+}
+
+#select1:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -40px;
+}
+
+#select2 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -60px;
+}
+
+#select2:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -70px;
+}
+
+#select3 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -90px;
+}
+
+#select3:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -100px;
+}
+
+#select4 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -120px;
+}
+
+#select4:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -130px;
+}
+
+#select5 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -150px;
+}
+
+#select5:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -145px;
+}
+
+#select6 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -180px;
+}
+
+#select6:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -175px;
+}
+
+#select7 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -210px;
+}
+
+#select7:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -210px;
+}
+
+#select8 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -240px;
+}
+
+#select8:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -245px;
+}
+
+#select9 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -270px;
+}
+
+#select9:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -275px;
+}
+
+#select10 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -300px;
+}
+
+#select10:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -290px;
+}
+
+#select11 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -330px;
+}
+
+#select11:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -320px;
+}
+
+#select12 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -360px;
+}
+
+#select12:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -350px;
+}
+
+#select13 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -390px;
+}
+
+#select13:hover {
+    -fx-translate-y: -60px;
+    -fx-translate-x: -380px;
+}
+
+#select14 {
+    -fx-display: flex;
+    -fx-position: relative;
+    -fx-flex-direction: column;
+    -fx-background-radius: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-translate-x: -420px;
+}
+
+#select14:hover {
+    -fx-translate-y: -50px;
+    -fx-translate-x: -410px;
+}
+
+#bet10 {
+    -fx-background-radius: 50px;
+}
+
+#bet50 {
+    -fx-background-radius: 50px;
+}
+
+#bet100 {
+    -fx-background-radius: 50px;
+}
+
+#drawBtn {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0, 0 0 4 0, 0 0 6 0, 0 0 8 0;
+    -fx-background-radius: 20;
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
+}
+
+#drawBtn:hover {
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+}
+
+#drawBtn:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 6 0 0 0, 6 0 3 0, 6 0 5 0, 6 0 7 0;
+}
+
+#battleBtn {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0, 0 0 4 0, 0 0 6 0, 0 0 8 0;
+    -fx-background-radius: 20;
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
+}
+
+#battleBtn:hover {
+-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+}
+
+#battleBtn:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 6 0 0 0, 6 0 3 0, 6 0 5 0, 6 0 7 0;
+}
+
+#undoBtn {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0, 0 0 4 0, 0 0 6 0, 0 0 8 0;
+    -fx-background-radius: 20;
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
+}
+#undoBtn:hover {
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+}
+
+#undoBtn:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 6 0 0 0, 6 0 3 0, 6 0 5 0, 6 0 7 0;
 }
