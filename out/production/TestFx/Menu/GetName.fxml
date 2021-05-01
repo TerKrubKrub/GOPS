@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menu.Controller">
+    <ImageView fitHeight="700.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Resource/Background/bg.png" />
+    </ImageView>
+    <TextField fx:id="textFPlayerName" alignment="CENTER" layoutX="295.0" layoutY="284.0" prefHeight="51.0" prefWidth="409.0" promptText="Enter your name here">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="28.0" />
+        </font>
+    </TextField>
+    <Label alignment="CENTER" layoutX="296.0" layoutY="217.0" text="ENTER YOUR NAME" textAlignment="CENTER">
+        <font>
+            <Font name="Broadway" size="40.0" />
+        </font>
+    </Label>
+    <Button fx:id="backButton" layoutX="343.0" layoutY="417.0" mnemonicParsing="false" onAction="#pressBackButton" prefHeight="50.0" prefWidth="129.0" stylesheets="@../File/Style.css" text="Back" textFill="WHITE">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+        </font>
+    </Button>
+    <Button fx:id="doneButton" layoutX="527.0" layoutY="417.0" mnemonicParsing="false" onAction="#pressDoneButton" prefHeight="50.0" prefWidth="129.0" stylesheets="@../File/Style.css" text="Done" textFill="WHITE">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+        </font>
+    </Button>
+    <Button fx:id="minimizeButton" layoutX="912.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressMinimizeButton" prefHeight="25.0" prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css" />
+    <Button fx:id="closeButton" layoutX="952.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressCloseButton" prefHeight="25.0" prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css" />
+</AnchorPane>
