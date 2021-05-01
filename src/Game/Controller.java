@@ -174,8 +174,8 @@ public class Controller implements Initializable {
             imgList.get(i).setImage(user.hand.get(i).getImage());
         }
 
-        for (int i = 0; i < imgBotList.size(); i++) {
-            imgBotList.get(i).setImage(backCard);
+        for (ImageView imageView : imgBotList) {
+            imageView.setImage(backCard);
         }
     }
 
