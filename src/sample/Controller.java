@@ -170,18 +170,20 @@ public class Controller implements Initializable {
     }
 
     public void renderCardImageViewStart() {
-        for(int i = 0; i < imgList.size(); i++) {
+        for (int i = 0; i < imgList.size(); i++) {
             imgList.get(i).setImage(user.hand.get(i).getImage());
         }
 
-        for(int i = 0; i < imgBotList.size(); i++) {
-            imgBotList.get(i).setImage(backCard);
+        for (ImageView imageView : imgBotList) {
+            imageView.setImage(backCard);
         }
     }
 
     public void removeCard(ImageView imgView) {
         imgView.setVisible(false);
     }
+
+    ////////////////////////BUTTON////////////////////////
 
     public void selectBetBtn(ActionEvent e) {
         String id = ((Button)e.getSource()).getId();
