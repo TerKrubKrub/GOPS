@@ -46,6 +46,7 @@ public class Controller implements Initializable {
     private boolean checkSelected;
     private boolean drawable;
     private boolean userFirst;
+    private boolean addBet;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -126,6 +127,7 @@ public class Controller implements Initializable {
         bot.playerTurn = true;
         user.playerTurn = false;
         userFirst = true;
+        addBet = true;
 
         backCard = new Image("Resource/Card/back.png");
 
@@ -189,6 +191,7 @@ public class Controller implements Initializable {
             bot.win(bot.betMoney);
             System.out.println("User : " + user.betPoint + " Bot : " + bot.betPoint + " Draw");
         }
+        drawable = true;
     }
 
     public void battleBtn() {
@@ -212,11 +215,12 @@ public class Controller implements Initializable {
         totalBet = 0;
 
         checkSelected = false;
-        drawable = true;
 
         userFirst = !userFirst;
         user.playerTurn = userFirst;
         bot.playerTurn = !userFirst;
+
+        updateLabel();
 
         removeCard(selectedCardView);
         removeCard(battleCardView);
@@ -225,28 +229,28 @@ public class Controller implements Initializable {
     }
 
     public void call() {
-        if(user.playerTurn) {
+        if(user.playerTurn && checkSelected) {
             if(bot.betMoney >= user.betMoney) {
                 totalBet += (bot.betMoney - user.betMoney);
                 user.bet(bot.betMoney - user.betMoney);
                 switchTurn();
                 removeBtn(undoBtn);
+                if(!userFirst) battleBtn();
+                else {
+                    botSelectedCard = bot.botChooseCard(battleCard.getPoint(), bot.hand);
+                    bot.betPoint = botSelectedCard.getPoint();
+                    bot.hand.remove(botSelectedCard);
+                    bot.sortByPoint();
+                    botSelectedCardView.setImage(backCard);
+                    renderCard(botSelectedCardView);
+                    botAction = bot.botChooseActionSecond(bot.getPointAction());
+                    botGetAction(botAction);
+                    removeBtn(undoBtn);
+                }
             }
             else System.out.println("Can't call");
         }
         else System.out.println("Not your turn");
-        if(!userFirst) battleBtn();
-        else {
-            botSelectedCard = bot.botChooseCard(battleCard.getPoint(), bot.hand);
-            bot.betPoint = botSelectedCard.getPoint();
-            bot.hand.remove(botSelectedCard);
-            bot.sortByPoint();
-            botSelectedCardView.setImage(backCard);
-            renderCard(botSelectedCardView);
-            botAction = bot.botChooseActionSecond(bot.getPointAction());
-            botGetAction(botAction);
-            removeBtn(undoBtn);
-        }
         updateLabel();
     }
 
@@ -260,9 +264,9 @@ public class Controller implements Initializable {
                 System.out.println("Bot bet : " + bot.betMoney);
                 System.out.println("User bet : " + user.betMoney);
                 switchTurn();
+                if(userFirst) battleBtn();
             }
         }
-        if(userFirst) battleBtn();
     }
 
     public void draw() throws IllegalAccessException {
@@ -297,7 +301,7 @@ public class Controller implements Initializable {
     }
 
     public void fold() {
-        if(user.playerTurn) {
+        if(user.playerTurn && checkSelected) {
             bot.win(totalBet);
             bot.plusScore(battleCard.getPoint());
             System.out.println("Bot Wins");
@@ -426,21 +430,30 @@ public class Controller implements Initializable {
     public void selectBetBtn(ActionEvent e) {
         String id = ((Button) e.getSource()).getId();
         if (user.playerTurn) {
-            betMoneySelected += getAmountBetFromBtn(id);
-            updateLabel();
-            System.out.println(betMoneySelected);
+            if(addBet) {
+                if(betMoneySelected <= user.money){
+                    betMoneySelected += getAmountBetFromBtn(id);
+                    updateLabel();
+                    System.out.println(betMoneySelected);
+                }
+                else System.out.println("Can't bet more");
+            }
+            else {
+                if(betMoneySelected >= 0){
+                    betMoneySelected -= getAmountBetFromBtn(id);
+                    updateLabel();
+                    System.out.println(betMoneySelected);
+                }
+                else System.out.println("Can't bet less");
+            }
         } else System.out.println("Not your turn");
     }
 
-    public void selectUnBetBtn(ActionEvent e) {
-        String id = ((Button) e.getSource()).getId();
-        if (user.playerTurn) {
-            user.unBet(getAmountBetFromBtn(id));
-            betMoneySelected -= getAmountBetFromBtn(id);
-            if(betMoneySelected < 0) betMoneySelected = 0;
-//            updateMoney();
-            System.out.println(user.getBetMoney());
-        } else System.out.println("Not your turn");
+    public void addBetBtn() {
+        addBet = true;
+    }
+    public void reduceBetBtn() {
+        addBet = false;
     }
 
     public void selectCardBtn(ActionEvent e) {
