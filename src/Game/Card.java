@@ -3,7 +3,10 @@ package Game;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class Card {
+import java.util.Comparator;
+
+public class Card{
+
     public enum Color{
         red, blue, green;
         private static final Color[] colors = Color.values();
@@ -45,10 +48,6 @@ public class Card {
         return this.value;
     }
 
-    public int getScore(){
-        return this.value.score;
-    }
-
     public Image getImage() {
         return this.img;
     }
@@ -57,9 +56,12 @@ public class Card {
         return this.imgView;
     }
 
+    public int getPoint(){
+        return this.value.score;
+    }
+
     @Override
     public String toString() {
         return "Card{" + "color=" + color + ", value=" + value + '}';
     }
-
 }

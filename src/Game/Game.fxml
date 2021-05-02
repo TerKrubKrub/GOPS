@@ -1,189 +1,475 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
-            prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Game.Controller">
-    <children>
-        <VBox layoutX="601.0" layoutY="360.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="selectedCardView" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true"
-                           preserveRatio="true"/>
-                <Button fx:id="undoBtn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#undoBtn" prefHeight="32.0" prefWidth="169.0" text="Undo"/>
-            </children>
-        </VBox>
-        <VBox layoutX="5.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card0" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select0" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="175.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card2" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="90.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card1" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="260.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card3" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select3" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="345.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card4" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select4" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="430.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card5" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select5" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="515.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card6" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select6" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="600.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card7" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select7" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="685.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card8" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select8" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="770.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card9" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select9" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="855.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card10" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select10" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="940.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card11" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select11" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="1025.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card12" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select12" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="1110.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card13" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select13" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="1195.0" layoutY="506.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fx:id="card14" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="select14" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectCardBtn" prefHeight="32.0" prefWidth="169.0" text="Select"/>
-            </children>
-        </VBox>
-        <VBox layoutX="980.0" layoutY="307.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="bet10" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectBetBtn" prefHeight="32.0" prefWidth="169.0" text="10$"/>
-            </children>
-        </VBox>
-        <VBox layoutX="1070.0" layoutY="307.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="bet50" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectBetBtn" prefHeight="32.0" prefWidth="169.0" text="50$"/>
-            </children>
-        </VBox>
-        <VBox layoutX="1155.0" layoutY="307.0" prefHeight="133.0" prefWidth="80.0">
-            <children>
-                <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
-                <Button fx:id="bet100" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false"
-                        onAction="#selectBetBtn" prefHeight="32.0" prefWidth="169.0" text="100$"/>
-            </children>
-        </VBox>
-        <ImageView fx:id="battleCardView" fitHeight="100.0" fitWidth="80.0" layoutX="450.0" layoutY="274.0"
-                   pickOnBounds="true" preserveRatio="true"/>
-        <Button fx:id="drawBtn" alignment="CENTER" contentDisplay="TOP" layoutX="426.0" layoutY="395.0"
-                mnemonicParsing="false" onAction="#draw" prefHeight="32.0" prefWidth="129.0" text="Draw"/>
-        <ImageView fx:id="cardBot0" fitHeight="100.0" fitWidth="80.0" layoutX="5.0" layoutY="68.0" pickOnBounds="true"
-                   preserveRatio="true"/>
-        <ImageView fx:id="cardBot1" fitHeight="100.0" fitWidth="80.0" layoutX="90.0" layoutY="68.0" pickOnBounds="true"
-                   preserveRatio="true"/>
-        <ImageView fx:id="cardBot2" fitHeight="100.0" fitWidth="80.0" layoutX="175.0" layoutY="68.0" pickOnBounds="true"
-                   preserveRatio="true"/>
-        <ImageView fx:id="cardBot3" fitHeight="100.0" fitWidth="80.0" layoutX="260.0" layoutY="68.0" pickOnBounds="true"
-                   preserveRatio="true"/>
-        <ImageView fx:id="cardBot4" fitHeight="100.0" fitWidth="80.0" layoutX="345.0" layoutY="68.0" pickOnBounds="true"
-                   preserveRatio="true"/>
-        <ImageView fx:id="cardBot5" fitHeight="100.0" fitWidth="80.0" layoutX="430.0" layoutY="68.0" pickOnBounds="true"
-                   preserveRatio="true"/>
-        <ImageView fx:id="cardBot6" fitHeight="100.0" fitWidth="80.0" layoutX="515.0" layoutY="68.0" pickOnBounds="true"
-                   preserveRatio="true"/>
-        <ImageView fx:id="cardBot7" fitHeight="100.0" fitWidth="80.0" layoutX="600.0" layoutY="68.0" pickOnBounds="true"
-                   preserveRatio="true"/>
-        <ImageView fx:id="cardBot9" fitHeight="100.0" fitWidth="80.0" layoutX="770.0" layoutY="68.0" pickOnBounds="true"
-                   preserveRatio="true"/>
-        <ImageView fx:id="cardBot8" fitHeight="100.0" fitWidth="80.0" layoutX="685.0" layoutY="68.0" pickOnBounds="true"
-                   preserveRatio="true"/>
-        <ImageView fx:id="cardBot10" fitHeight="100.0" fitWidth="80.0" layoutX="855.0" layoutY="68.0"
-                   pickOnBounds="true" preserveRatio="true"/>
-        <ImageView fx:id="cardBot11" fitHeight="100.0" fitWidth="80.0" layoutX="940.0" layoutY="68.0"
-                   pickOnBounds="true" preserveRatio="true"/>
-        <ImageView fx:id="cardBot12" fitHeight="100.0" fitWidth="80.0" layoutX="1025.0" layoutY="68.0"
-                   pickOnBounds="true" preserveRatio="true"/>
-        <ImageView fx:id="cardBot13" fitHeight="100.0" fitWidth="80.0" layoutX="1110.0" layoutY="68.0"
-                   pickOnBounds="true" preserveRatio="true"/>
-        <ImageView fx:id="cardBot14" fitHeight="100.0" fitWidth="80.0" layoutX="1195.0" layoutY="68.0"
-                   pickOnBounds="true" preserveRatio="true"/>
-        <Button fx:id="battleBtn" alignment="CENTER" contentDisplay="TOP" layoutX="725.0" layoutY="395.0"
-                mnemonicParsing="false" onAction="#draw" prefHeight="32.0" prefWidth="129.0" text="Battle!"/>
-        <Button fx:id="minimizeButton" layoutX="1202.0" layoutY="16.0" mnemonicParsing="false"
-                onAction="#pressMinimizeButton" prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css"
-                AnchorPane.rightAnchor="62.4" AnchorPane.topAnchor="16.0"/>
-        <Button fx:id="closeButton" layoutX="1152.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressCloseButton"
-                prefHeight="25.0" prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css"
-                AnchorPane.rightAnchor="22.4" AnchorPane.topAnchor="16.0"/>
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.Controller">
+    <ImageView fitHeight="700.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../Resource/Background/game.png" />
+        </image>
+    </ImageView>
+    <Button fx:id="undoBtn" alignment="CENTER" contentDisplay="TOP" layoutX="459.0" layoutY="483.0" mnemonicParsing="false" onAction="#undoBtn" prefHeight="38.0" prefWidth="81.0" stylesheets="@../File/Style.css" text="Reselect" textFill="#4b1919">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+        </font>
+    </Button>
+    <HBox layoutX="50.0" layoutY="641.0" prefHeight="118.0" prefWidth="387.0">
+        <Button fx:id="select0" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card0" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card1" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card2" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select3" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card3" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select4" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card4" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select5" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card5" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select6" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card6" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select7" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card7" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select8" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card8" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select9" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card9" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select10" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card10" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select11" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card11" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select12" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card12" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select13" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card13" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+        <Button fx:id="select14" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
+            <graphic>
+                <ImageView fx:id="card14" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <padding>
+                <Insets bottom="-11.0" top="-11.0" />
+            </padding>
+        </Button>
+    </HBox>
+    <ImageView fx:id="cardBot0" fitHeight="120.0" fitWidth="88.0" layoutX="246.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot1" fitHeight="120.0" fitWidth="88.0" layoutX="276.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot2" fitHeight="120.0" fitWidth="88.0" layoutX="306.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot3" fitHeight="120.0" fitWidth="88.0" layoutX="336.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot4" fitHeight="120.0" fitWidth="88.0" layoutX="366.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot5" fitHeight="120.0" fitWidth="88.0" layoutX="396.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot6" fitHeight="120.0" fitWidth="88.0" layoutX="426.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot7" fitHeight="120.0" fitWidth="88.0" layoutX="456.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot9" fitHeight="120.0" fitWidth="88.0" layoutX="486.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot8" fitHeight="120.0" fitWidth="88.0" layoutX="516.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot10" fitHeight="120.0" fitWidth="88.0" layoutX="546.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot11" fitHeight="120.0" fitWidth="88.0" layoutX="576.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot12" fitHeight="120.0" fitWidth="88.0" layoutX="606.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot13" fitHeight="120.0" fitWidth="88.0" layoutX="636.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="cardBot14" fitHeight="120.0" fitWidth="88.0" layoutX="666.0" layoutY="-39.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="battleCardView" fitHeight="90.0" fitWidth="66.0" layoutX="286.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="20.0" offsetY="4.0" radius="9.5" width="20.0" />
+        </effect>
+    </ImageView>
+    <Button fx:id="drawBtn" alignment="CENTER" contentDisplay="TOP" layoutX="247.0" layoutY="387.0" mnemonicParsing="false" onAction="#draw" prefHeight="32.0" prefWidth="66.0" stylesheets="@../File/Style.css" text="Draw" textFill="#4b1919">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+        </font>
+    </Button>
+    <Button fx:id="minimizeBtn" layoutX="1202.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressMinimizeBtn" prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css" AnchorPane.rightAnchor="62.4" AnchorPane.topAnchor="16.0" />
+    <Button fx:id="closeBtn" layoutX="1152.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressCloseBtn" prefHeight="25.0" prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css" AnchorPane.rightAnchor="22.4" AnchorPane.topAnchor="16.0" />
+    <ImageView fx:id="selectedCardView" fitHeight="90.0" fitWidth="66.0" layoutX="467.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="20.0" offsetY="4.0" radius="9.5" width="20.0" />
+        </effect>
+    </ImageView>
+    <ImageView fitHeight="90.0" fitWidth="66.0" layoutX="210.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../Resource/Card/back.png" />
+        </image>
+        <effect>
+            <DropShadow height="20.0" offsetY="4.0" radius="9.5" width="20.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="botSelectedCardView" fitHeight="90.0" fitWidth="66.0" layoutX="467.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="20.0" offsetY="4.0" radius="9.5" width="20.0" />
+        </effect>
+    </ImageView>
+    <VBox alignment="CENTER" layoutX="597.0" layoutY="424.0" prefHeight="60.0" prefWidth="25.0" spacing="5.0">
+        <children>
+            <Button fx:id="addBetBtn" mnemonicParsing="false" onAction="#addBet" prefHeight="25.0" prefWidth="25.0" stylesheets="@../File/Style.css" text="+">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="reduceBetBtn" mnemonicParsing="false" onAction="#reduceBet" prefHeight="25.0" prefWidth="25.0" stylesheets="@../File/Style.css" text="-" textFill="WHITE">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Button>
+        </children>
+    </VBox>
+    <HBox alignment="CENTER" layoutX="636.0" layoutY="427.0" prefHeight="54.0" prefWidth="159.0" spacing="10.0">
+        <children>
+            <Button fx:id="bet10" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectBetBtn" prefHeight="32.0" prefWidth="169.0" stylesheets="@../File/Style.css">
+                <graphic>
+                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../Resource/Chip/10.png" />
+                        </image>
+                        <effect>
+                            <DropShadow height="15.0" offsetY="3.0" radius="7.0" width="15.0" />
+                        </effect>
+                    </ImageView>
+                </graphic>
+                <padding>
+                    <Insets bottom="-11.0" top="-11.0" />
+                </padding>
+            </Button>
+            <Button fx:id="bet50" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectBetBtn" prefHeight="32.0" prefWidth="169.0" stylesheets="@../File/Style.css">
+                <graphic>
+                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../Resource/Chip/50.png" />
+                        </image>
+                        <effect>
+                            <DropShadow height="15.0" offsetY="3.0" radius="7.0" width="15.0" />
+                        </effect>
+                    </ImageView>
+                </graphic>
+                <padding>
+                    <Insets bottom="-11.0" top="-11.0" />
+                </padding>
+            </Button>
+            <Button fx:id="bet100" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectBetBtn" prefHeight="32.0" prefWidth="169.0" stylesheets="@../File/Style.css">
+                <graphic>
+                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../Resource/Chip/100.png" />
+                        </image>
+                        <effect>
+                            <DropShadow height="15.0" offsetY="3.0" radius="7.0" width="15.0" />
+                        </effect>
+                    </ImageView>
+                </graphic>
+                <padding>
+                    <Insets bottom="-11.0" top="-11.0" />
+                </padding>
+            </Button>
+        </children>
+    </HBox>
+    <HBox layoutX="598.0" layoutY="368.0" prefHeight="38.0" prefWidth="200.0" spacing="10.0">
+        <children>
+            <Button fx:id="raiseBtn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#raise" prefHeight="32.0" prefWidth="65.0" stylesheets="@../File/Style.css" text="Raise" textFill="#4b1919">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="callBtn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#call" prefHeight="32.0" prefWidth="55.0" stylesheets="@../File/Style.css" text="Call" textFill="#4b1919">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="foldBtn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#fold" prefHeight="31.0" prefWidth="60.0" stylesheets="@../File/Style.css" text="Fold" textFill="#4b1919">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Button>
+        </children>
+    </HBox>
+    <VBox layoutX="119.0" layoutY="539.0" prefHeight="53.0" prefWidth="101.0">
+        <children>
+            <Label fx:id="battlePt" text="10" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label text="Your Point:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <VBox layoutX="119.0" layoutY="101.0" prefHeight="53.0" prefWidth="101.0">
+        <children>
+            <Label text="Bot Point:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="botBattlePt" text="10" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <VBox alignment="CENTER_RIGHT" layoutX="670.0" layoutY="278.0" prefHeight="74.0" prefWidth="116.0">
+        <children>
+            <Label text="Turn Value:" underline="true">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                </font>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0">
+                        <color>
+                            <Color red="0.5157894492149353" green="0.473762184381485" blue="0.473762184381485" />
+                        </color>
+                    </DropShadow>
+                </effect>
+            </Label>
+            <Label fx:id="totalBetLabel" text="100">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="36.0" />
+                </font>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0">
+                        <color>
+                            <Color red="0.5157894492149353" green="0.473762184381485" blue="0.473762184381485" />
+                        </color>
+                    </DropShadow>
+                </effect>
+            </Label>
+        </children>
+    </VBox>
+    <VBox alignment="TOP_RIGHT" layoutX="758.0" layoutY="539.0" prefHeight="54.0" prefWidth="126.0">
+        <children>
+            <Label fx:id="userMoney" text="100" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label text="Your Total Money:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <VBox alignment="TOP_RIGHT" layoutX="750.0" layoutY="101.0" prefHeight="54.0" prefWidth="134.0">
+        <children>
+            <Label text="Bot Total Money:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="userMoney1" text="100" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <VBox alignment="CENTER_LEFT" layoutX="243.0" layoutY="199.0" prefHeight="54.0" prefWidth="134.0">
+        <children>
+            <Label text="Bot Turn Money:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label text="100" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <VBox alignment="CENTER_LEFT" layoutX="237.0" layoutY="447.0" prefHeight="54.0" prefWidth="145.0">
+        <children>
+            <Label text="100" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label text="Your Turn Money:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <VBox alignment="CENTER_RIGHT" layoutX="630.0" layoutY="192.0" prefHeight="54.0" prefWidth="159.0">
+        <children>
+            <Label text="Bot Action:" underline="true">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0">
+                        <color>
+                            <Color red="0.5157894492149353" green="0.473762184381485" blue="0.473762184381485" />
+                        </color>
+                    </DropShadow>
+                </effect>
+            </Label>
+            <Label fx:id="botActionLabel" text="action">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                </font>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0">
+                        <color>
+                            <Color red="0.5157894492149353" green="0.473762184381485" blue="0.473762184381485" />
+                        </color>
+                    </DropShadow>
+                </effect>
+            </Label>
+        </children>
+    </VBox>
 </AnchorPane>
