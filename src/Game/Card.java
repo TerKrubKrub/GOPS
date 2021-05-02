@@ -4,8 +4,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.util.Comparator;
+import java.util.Objects;
 
-public class Card{
+public class Card {
 
     public enum Color{
         red, blue, green;
@@ -65,5 +66,11 @@ public class Card{
         return "Card{" + "color=" + color + ", value=" + value + '}';
     }
 
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Card card = (Card) o;
+        return color == card.color && value == card.value;
+    }
 }

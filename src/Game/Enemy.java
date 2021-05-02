@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Enemy extends Player{
 
-    private ArrayList<Integer> cardpoint = new ArrayList<>();
     public int pointChooseCard = 0;
     private int pointAction = 0;
     private String action;
@@ -26,7 +25,7 @@ public class Enemy extends Player{
 //        }
         this.pointChooseCard=0;
         int indexForDelete=0;
-        botHand.get(0).getPoint();
+        //botHand.get(0).getPoint();
 
         //point 1-5
         if(pointCentral<=5 ) {
@@ -180,7 +179,7 @@ public class Enemy extends Player{
 //        }
         return null;
     }
-    
+
     @Override
     public String toString() {
         return "Enemy{" +
