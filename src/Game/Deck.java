@@ -58,4 +58,8 @@ public class Deck {
             cards[i] = randomCard;
         }
     }
+
+    public int getCardsInDeck() {
+        return this.cardsInDeck;
+    }
 }

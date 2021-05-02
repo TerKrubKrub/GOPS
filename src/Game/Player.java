@@ -16,7 +16,7 @@ public class Player {
     }
 
     public void initPlayer() {
-        this.money = 100;
+        this.money = 1000;
         this.betMoney = 0;
         this.playerTurn = false;
         this.score = 0;

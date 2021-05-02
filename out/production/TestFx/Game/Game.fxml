@@ -329,7 +329,7 @@
     </HBox>
     <VBox layoutX="119.0" layoutY="539.0" prefHeight="53.0" prefWidth="101.0">
         <children>
-            <Label fx:id="battlePt" text="10" textFill="#e5e1ea">
+            <Label fx:id="userBattlePt" text="10" textFill="#e5e1ea">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="24.0" />
                 </font>
@@ -357,7 +357,7 @@
     </VBox>
     <VBox alignment="CENTER_RIGHT" layoutX="670.0" layoutY="234.0" prefHeight="74.0" prefWidth="116.0">
         <children>
-            <Label text="Turn Value:" underline="true">
+            <Label text="TOTALBET" underline="true">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="18.0" />
                 </font>
@@ -390,7 +390,7 @@
                     <Font name="Arial Rounded MT Bold" size="24.0" />
                 </font>
             </Label>
-            <Label text="Your Total Money:" textFill="#e5e1ea">
+            <Label text="Your Money:" textFill="#e5e1ea">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="14.0" />
                 </font>
@@ -399,12 +399,12 @@
     </VBox>
     <VBox alignment="TOP_RIGHT" layoutX="750.0" layoutY="101.0" prefHeight="54.0" prefWidth="134.0">
         <children>
-            <Label text="Bot Total Money:" textFill="#e5e1ea">
+            <Label text="Bot Money:" textFill="#e5e1ea">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="14.0" />
                 </font>
             </Label>
-            <Label fx:id="userMoney1" text="100" textFill="#e5e1ea">
+            <Label fx:id="botMoney" text="100" textFill="#e5e1ea">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="24.0" />
                 </font>
@@ -418,7 +418,7 @@
                     <Font name="Arial Rounded MT Bold" size="14.0" />
                 </font>
             </Label>
-            <Label text="100" textFill="#e5e1ea">
+            <Label fx:id="botBetMoney" text="100" textFill="#e5e1ea">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="24.0" />
                 </font>
@@ -427,7 +427,7 @@
     </VBox>
     <VBox alignment="CENTER_LEFT" layoutX="237.0" layoutY="447.0" prefHeight="54.0" prefWidth="145.0">
         <children>
-            <Label text="100" textFill="#e5e1ea">
+            <Label fx:id="userBetMoney" text="100" textFill="#e5e1ea">
                 <font>
                     <Font name="Arial Rounded MT Bold" size="24.0" />
                 </font>
@@ -439,18 +439,18 @@
             </Label>
         </children>
     </VBox>
-    <HBox layoutX="11.0" layoutY="11.0" prefHeight="54.0" prefWidth="242.0">
-        <children>
-            <Label text="Score: " textFill="WHITE">
-                <font>
-                    <Font name="Arial Rounded MT Bold" size="30.0" />
-                </font>
-            </Label>
-            <Label fx:id="scoreLabel" text="100" textFill="WHITE">
-                <font>
-                    <Font name="Arial Rounded MT Bold" size="30.0" />
-                </font>
-            </Label>
-        </children>
-    </HBox>
+   <VBox alignment="TOP_CENTER" layoutX="642.0" layoutY="456.0" prefHeight="54.0" prefWidth="145.0">
+      <children>
+         <Label fx:id="betMoney" text="100" textFill="#e5e1ea">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="24.0" />
+            </font>
+         </Label>
+         <Label text="Bet" textFill="#e5e1ea">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="14.0" />
+            </font>
+         </Label>
+      </children>
+   </VBox>
 </AnchorPane>

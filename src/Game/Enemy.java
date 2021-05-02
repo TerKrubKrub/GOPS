@@ -13,7 +13,7 @@ public class Enemy extends Player{
 
 
     public int getPointAction() {
-        return pointAction;
+        return this.pointAction;
     }
 
     public Enemy() {
@@ -24,7 +24,7 @@ public class Enemy extends Player{
 //        for(int a = 0; a<botHand.size(); a++){
 //            System.out.print(botHand.get(a).getPoint()+" ");
 //        }
-        pointChooseCard=0;
+        this.pointChooseCard=0;
         int indexForDelete=0;
         botHand.get(0).getPoint();
 
@@ -33,20 +33,20 @@ public class Enemy extends Player{
             int random = (int)(Math.random()*4);
 
             if(random==0){
-                pointChooseCard=botHand.get(0).getPoint();
-                pointAction=10;
+                this.pointChooseCard=botHand.get(0).getPoint();
+                this.pointAction=10;
                 indexForDelete=0;
             }
 
             else if(random==1){
                 if(botHand.size()-1>2){
-                    pointChooseCard=botHand.get(1).getPoint();
-                    pointAction=11;
+                    this.pointChooseCard=botHand.get(1).getPoint();
+                    this.pointAction=11;
                     indexForDelete=1;
                 }
 
                 else{
-                    pointChooseCard=botHand.get(0).getPoint();
+                    this.pointChooseCard=botHand.get(0).getPoint();
                     indexForDelete=0;
                     pointAction=10;
                 }
@@ -55,28 +55,28 @@ public class Enemy extends Player{
 
             else if(random==2){
                 if(botHand.size()-1>3){
-                    pointChooseCard=botHand.get(2).getPoint();
+                    this.pointChooseCard=botHand.get(2).getPoint();
                     indexForDelete=2;
-                    pointAction=12;
+                    this.pointAction=12;
                 }
 
                 else {
-                    pointChooseCard = botHand.get(0).getPoint();
+                    this.pointChooseCard = botHand.get(0).getPoint();
                     indexForDelete = 0;
-                    pointAction=10;
+                    this.pointAction=10;
                 }
             }
 
             else if(random==3){
                 if(botHand.size()-1>4) {
-                    pointChooseCard = botHand.get(3).getPoint();
+                    this.pointChooseCard = botHand.get(3).getPoint();
                     indexForDelete = 3;
-                    pointAction=13;
+                    this.pointAction=13;
                 }
                 else {
-                    pointChooseCard = botHand.get(0).getPoint();
+                    this.pointChooseCard = botHand.get(0).getPoint();
                     indexForDelete=0;
-                    pointAction=10;
+                    this.pointAction=10;
                 }
             }
         }
@@ -87,42 +87,42 @@ public class Enemy extends Player{
 
             if(random==0){
                 if(botHand.size()-1>7){
-                    pointChooseCard=botHand.get(botHand.size()-1-5).getPoint();
+                    this.pointChooseCard=botHand.get(botHand.size()-1-5).getPoint();
                     indexForDelete=(int)(botHand.size()-1-5);
-                    pointAction=20;
+                    this.pointAction=20;
                 }
 
                 else{
-                    pointChooseCard=botHand.get((int)((botHand.size()-1)/2)).getPoint();
+                    this.pointChooseCard=botHand.get((int)((botHand.size()-1)/2)).getPoint();
                     indexForDelete=((int)((botHand.size()-1)/2));
-                    pointAction=22;
+                    this.pointAction=22;
                 }
 
             }
 
             else if(random==1){
                 if(botHand.size()-1>6) {
-                    pointChooseCard = botHand.get(botHand.size()-1 - 4).getPoint();
+                    this.pointChooseCard = botHand.get(botHand.size()-1 - 4).getPoint();
                     indexForDelete = botHand.size()-1 - 4;
-                    pointAction=21;
+                    this.pointAction=21;
                 }
                 else{
-                    pointChooseCard = botHand.get((int) ((botHand.size()-1) / 2)).getPoint();
+                    this.pointChooseCard = botHand.get((int) ((botHand.size()-1) / 2)).getPoint();
                     indexForDelete = (int) ((botHand.size()-1) / 2);
-                    pointAction=22;
+                    this.pointAction=22;
                 }
             }
 
             else if(random==2){
                 if(botHand.size()-1>5) {
-                    pointChooseCard = botHand.get(botHand.size()-1 - 3).getPoint();
+                    this.pointChooseCard = botHand.get(botHand.size()-1 - 3).getPoint();
                     indexForDelete = (int) (botHand.size()-1 - 3);
-                    pointAction=22;
+                    this.pointAction=22;
                 }
                 else {
-                    pointChooseCard = botHand.get((int) ((botHand.size()-1) / 2)).getPoint();
+                    this.pointChooseCard = botHand.get((int) ((botHand.size()-1) / 2)).getPoint();
                     indexForDelete = (int) ((botHand.size()-1) / 2);
-                    pointAction=22;
+                    this.pointAction=22;
                 }
             }
         }
@@ -133,51 +133,51 @@ public class Enemy extends Player{
 
             if(random==0){
                 if(botHand.size()-1>4) {
-                    pointChooseCard = botHand.get(botHand.size()-1 - 2).getPoint();
+                    this.pointChooseCard = botHand.get(botHand.size()-1 - 2).getPoint();
                     indexForDelete = botHand.size()-1 - 2;
-                    pointAction=30;
+                    this.pointAction=30;
                 }
                 else {
-                    pointChooseCard = botHand.get((int) botHand.size()-1).getPoint();
+                    this.pointChooseCard = botHand.get((int) botHand.size()-1).getPoint();
                     indexForDelete = (int) (botHand.size()-1);
-                    pointAction=32;
+                    this.pointAction=32;
                 }
 
             }
 
             else if(random==1){
                 if(botHand.size()-1>3) {
-                    pointChooseCard = botHand.get(botHand.size()-1 - 1).getPoint();
+                    this.pointChooseCard = botHand.get(botHand.size()-1 - 1).getPoint();
                     indexForDelete = botHand.size()-1 - 1;
-                    pointAction=31;
+                    this.pointAction=31;
                 }
                 else {
-                    pointChooseCard = botHand.get((int) botHand.size()-1).getPoint();
+                    this.pointChooseCard = botHand.get((int) botHand.size()-1).getPoint();
                     indexForDelete = (int) botHand.size()-1;
-                    pointAction=32;
+                    this.pointAction=32;
                 }
             }
 
             else if(random==2){
-                pointChooseCard=botHand.get((int)botHand.size()-1).getPoint();
+                this.pointChooseCard=botHand.get((int)botHand.size()-1).getPoint();
                 indexForDelete = (int)botHand.size()-1;
-                pointAction=32;
+                this.pointAction=32;
             }
         }
-        System.out.println("Bot Choose: "+ pointChooseCard);
+//        for(Card i : botHand) {
+//            System.out.print(i.getPoint() + " ");
+//        }
+        //System.out.println("Bot Choose: " + this.pointChooseCard);
         //System.out.println("Bot size"+(botHand.size()-1));
-        botHand.remove(indexForDelete);
-        botChooseActionFirst(pointAction);
         for(Card i : botHand) {
-            if(i.getPoint() == pointAction) {
+            if(i.getPoint() == this.pointChooseCard) {
                 return i;
             }
         }
-//            System.out.println();
+        botHand.remove(indexForDelete);
 //        for(int z=0;z<botHand.size();z++){
 //            botHand.removeIf(card -> botHand.get(z).getValue()==pointChooseCard);
 //        }
-
         return null;
     }
     
@@ -201,7 +201,7 @@ public class Enemy extends Player{
             }
             else if(randomAction>=81 && randomAction <=100){
                 actionF = "Raise10";
-                amountBet = 10;
+                this.amountBet = 10;
             }
 
         }
@@ -215,7 +215,7 @@ public class Enemy extends Player{
             }
             else if(randomAction>=81 && randomAction <=100){
                 actionF = "Raise10";
-                amountBet = 10;
+                this.amountBet = 10;
             }
         }
         //1-5 ลงไพ่น้อยสุดอันดับ3
@@ -227,7 +227,7 @@ public class Enemy extends Player{
             }
             else if(randomAction>=76 && randomAction <=100){
                 actionF = "Raise20";
-                amountBet = 20;
+                this.amountBet = 20;
             }
         }
         //1-5 ลงไพ่น้อยสุดอันดับ4
@@ -239,7 +239,7 @@ public class Enemy extends Player{
             }
             else if(randomAction>=76 && randomAction <=100){
                 actionF = "Raise20";
-                amountBet = 20;
+                this.amountBet = 20;
             }
         }
 
@@ -252,7 +252,7 @@ public class Enemy extends Player{
             }
             else if(randomAction>=71 && randomAction <=100){
                 actionF = "Raise30";
-                amountBet = 30;
+                this.amountBet = 30;
             }
         }
 
@@ -265,7 +265,7 @@ public class Enemy extends Player{
             }
             else if(randomAction>=61 && randomAction <=100){
                 actionF = "Raise40";
-                amountBet = 40;
+                this.amountBet = 40;
             }
         }
 
@@ -278,7 +278,7 @@ public class Enemy extends Player{
             }
             else if(randomAction>=51 && randomAction <=100){
                 actionF = "Raise50";
-                amountBet = 50;
+                this.amountBet = 50;
             }
         }
 
@@ -291,7 +291,7 @@ public class Enemy extends Player{
             }
             else if(randomAction>=31 && randomAction <=100){
                 actionF = "Raise100";
-                amountBet = 100;
+                this.amountBet = 100;
             }
         }
 
@@ -304,7 +304,7 @@ public class Enemy extends Player{
             }
             else if(randomAction>=26 && randomAction <=100){
                 actionF = "Raise120";
-                amountBet = 120;
+                this.amountBet = 120;
             }
         }
 
@@ -317,7 +317,7 @@ public class Enemy extends Player{
             }
             else if(randomAction>=21 && randomAction <=100){
                 actionF = "Raise120";
-                amountBet = 120;
+                this.amountBet = 120;
             }
         }
 
@@ -339,7 +339,7 @@ public class Enemy extends Player{
                     action="Call";
 
                 else if(random<=100)
-                    action="Bet";
+                    action="Raise10";
                 amountBet=10;
             }
             else
@@ -351,7 +351,7 @@ public class Enemy extends Player{
                     action="Call";
 
                 else if(random<=100)
-                    action="Bet";
+                    action="Raise10";
                 amountBet=10;
             }
             else
@@ -363,7 +363,7 @@ public class Enemy extends Player{
                     action="Call";
 
                 else if(random<=100)
-                    action="Bet";
+                    action="Raise30";
                 amountBet=30;
             }
             else
@@ -375,7 +375,7 @@ public class Enemy extends Player{
                     action="Call";
 
                 else if(random<=100)
-                    action="Bet";
+                    action="Raise20";
                 amountBet=20;
             }
         }else
@@ -391,7 +391,7 @@ public class Enemy extends Player{
                     action="Call";
 
                 else if(random<=100)
-                    action="Bet";
+                    action="Raise60";
                 amountBet=60;
             }
             else
@@ -403,7 +403,7 @@ public class Enemy extends Player{
                     action="Call";
 
                 else if(random<=100)
-                    action="Bet";
+                    action="Raise50";
                 amountBet=50;
             }
             else
@@ -415,7 +415,7 @@ public class Enemy extends Player{
                     action="Call";
 
                 else if(random<=100)
-                    action="Bet";
+                    action="Raise60";
                 amountBet=60;
             }
         }else
@@ -431,7 +431,7 @@ public class Enemy extends Player{
                     action="Call";
 
                 else if(random<=100)
-                    action="Bet";
+                    action="Raise80";
                 amountBet=80;
             }
             else
@@ -443,7 +443,7 @@ public class Enemy extends Player{
                     action="Call";
 
                 else if(random<=100)
-                    action="Bet";
+                    action="Raise100";
                 amountBet=100;
             }
             else
@@ -452,19 +452,11 @@ public class Enemy extends Player{
                     action="Call";
 
                 else if(random<=100)
-                    action="Bet";
+                    action="Raise100";
                 amountBet=100;
             }
-
-
         }
-
         return  action;
-    }
-
-    public void bet(int amount){
-        this.betMoney += amount;
-        this.money -= amount;
     }
 
     public int getAmountBet() {

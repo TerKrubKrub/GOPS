@@ -39,12 +39,13 @@ public class Controller implements Initializable {
     private Image selectedCard, backCard;
 
     @FXML
-    private Label userMoney, botMoney, totalBetLabel;
+    private Label userBetMoney, botBetMoney, totalBetLabel, userBattlePt, botBattlePt, userMoney, botMoney, scoreLabel, betMoney;
 
     private ArrayList<ImageView> imgList, imgBotList;
 
     private boolean checkSelected;
     private boolean drawable;
+    private boolean userFirst;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -102,7 +103,7 @@ public class Controller implements Initializable {
     }
 
     public void handOutCards() throws IllegalAccessException {
-        for (int i = 0; i < Card.Value.values().length; i++) {
+        for (int i = 0; i < Card.Value.values().length - 1; i++) {
             user.hand.add(deck.drawCard());
             bot.hand.add(deck.drawCard());
         }
@@ -124,24 +125,14 @@ public class Controller implements Initializable {
         drawable = true;
         bot.playerTurn = true;
         user.playerTurn = false;
+        userFirst = true;
 
         backCard = new Image("Resource/Card/back.png");
 
-//        updateMoney();
-//        userMoney.setScaleX(2);
-//        userMoney.setScaleY(2);
-//        botMoney.setScaleX(2);
-//        botMoney.setScaleY(2);
-//        totalBetLabel.setScaleX(2);
-//        totalBetLabel.setScaleY(2);
+        updateLabel();
 
         removeCard(battleCardView);
         removeCard(selectedCardView);
-        //removeCard(botSelectedCardView);
-//        removeBtn(drawBtn);
-//        removeBtn(undoBtn);
-//        removeBtn(battleBtn);
-//        removeBtn(battleBtn);
 
         removeBtn(undoBtn);
     }
@@ -188,23 +179,23 @@ public class Controller implements Initializable {
         if (user.betPoint > bot.betPoint) {
             user.win(totalBet);
             user.plusScore(battleCard.getPoint());
-            System.out.println("User Wins");
+            System.out.println("User : " + user.betPoint + " Bot : " + bot.betPoint + " User Wins");
         } else if (user.betPoint < bot.betPoint) {
             bot.win(totalBet);
             bot.plusScore(battleCard.getPoint());
-            System.out.println("Bot Wins");
+            System.out.println("User : " + user.betPoint + " Bot : " + bot.betPoint + " Bot Wins");
         } else {
             user.win(user.betMoney);
             bot.win(bot.betMoney);
-            System.out.println("Draw");
+            System.out.println("User : " + user.betPoint + " Bot : " + bot.betPoint + " Draw");
         }
     }
 
     public void battleBtn() {
-        if(checkSelected && user.betMoney != 0){
+        if(checkSelected && user.betMoney >= 0){
             battle();
-            battleReset();
-//            updateMoney();
+            showAllCardBattle();
+            updateLabel();
             checkGameOver();
         }
     }
@@ -223,7 +214,10 @@ public class Controller implements Initializable {
         checkSelected = false;
         drawable = true;
 
-//        updateMoney();
+        userFirst = !userFirst;
+        user.playerTurn = userFirst;
+        bot.playerTurn = !userFirst;
+
         removeCard(selectedCardView);
         removeCard(battleCardView);
         removeCard(botSelectedCardView);
@@ -232,49 +226,71 @@ public class Controller implements Initializable {
 
     public void call() {
         if(user.playerTurn) {
-            if(bot.betMoney > user.betMoney) {
-                totalBet += bot.betMoney - user.betMoney;
+            if(bot.betMoney >= user.betMoney) {
+                totalBet += (bot.betMoney - user.betMoney);
                 user.bet(bot.betMoney - user.betMoney);
                 switchTurn();
-                battleBtn();
+                removeBtn(undoBtn);
             }
             else System.out.println("Can't call");
         }
         else System.out.println("Not your turn");
+        if(!userFirst) battleBtn();
+        else {
+            botSelectedCard = bot.botChooseCard(battleCard.getPoint(), bot.hand);
+            bot.betPoint = botSelectedCard.getPoint();
+            bot.hand.remove(botSelectedCard);
+            bot.sortByPoint();
+            botSelectedCardView.setImage(backCard);
+            renderCard(botSelectedCardView);
+            botAction = bot.botChooseActionSecond(bot.getPointAction());
+            botGetAction(botAction);
+            removeBtn(undoBtn);
+        }
+        updateLabel();
     }
 
     public void botCall() {
         if(bot.playerTurn) {
-            if (user.betMoney > bot.betMoney) {
-                totalBet += user.betMoney - bot.betMoney;
-                user.bet(user.betMoney - bot.betMoney);
+            if (user.betMoney >= bot.betMoney) {
+                totalBet += (user.betMoney - bot.betMoney);
+                bot.bet(user.betMoney - bot.betMoney);
+                updateLabel();
+                System.out.println("Bot " + botAction);
+                System.out.println("Bot bet : " + bot.betMoney);
+                System.out.println("User bet : " + user.betMoney);
                 switchTurn();
-                battleBtn();
             }
         }
+        if(userFirst) battleBtn();
     }
 
     public void draw() throws IllegalAccessException {
+        battleReset();
         if(drawable) {
             if(user.playerTurn) {
                 battleCard = deck.drawCard();
+                System.out.println(battleCard.getPoint());
                 battleCardView.setImage(battleCard.getImage());
-                //botSelectedCardView.setImage(backCard);
-                //updateMoney();
                 renderCard(battleCardView);
-                //renderCard(botSelectedCardView);
                 drawable = false;
+                userFirst = true;
             }
             if(bot.playerTurn) {
                 battleCard = deck.drawCard();
+                System.out.println(battleCard.getPoint());
                 battleCardView.setImage(battleCard.getImage());
-                botSelectedCardView.setImage(backCard);
                 botSelectedCard = bot.botChooseCard(battleCard.getPoint(), bot.hand);
-                //updateMoney();
+                bot.betPoint = botSelectedCard.getPoint();
+                bot.hand.remove(botSelectedCard);
+                bot.sortByPoint();
+                botSelectedCardView.setImage(backCard);
+                botAction = bot.botChooseActionFirst(bot.getPointAction());
+                botGetAction(botAction);
                 renderCard(battleCardView);
                 renderCard(botSelectedCardView);
                 drawable = false;
-                switchTurn();
+                userFirst = false;
             }
         }
         else System.out.println("Can't draw more");
@@ -286,32 +302,69 @@ public class Controller implements Initializable {
             bot.plusScore(battleCard.getPoint());
             System.out.println("Bot Wins");
             switchTurn();
-            battleReset();
+            removeBtn(undoBtn);
         }
         else System.out.println("Not your turn");
+        updateLabel();
     }
 
     public void botFold() {
-
+        if(bot.playerTurn) {
+            user.win(totalBet);
+            user.plusScore(battleCard.getPoint());
+            System.out.println("User Wins");
+            System.out.println("Bot " + botAction);
+            switchTurn();
+        }
+        else System.out.println("Not your turn");
+        updateLabel();
     }
 
     public void raise() {
-        if(user.playerTurn && betMoneySelected != 0) {
+        if(user.playerTurn && betMoneySelected != 0 && (betMoneySelected + user.betMoney) > bot.betMoney && checkSelected) {
             user.bet(betMoneySelected);
+            totalBet += betMoneySelected;
             betMoneySelected = 0;
-            botAction = bot.botChooseActionFirst(battleCard.getPoint());
-            if(botAction.equals("Call")) botCall();
-            for(int i = 0; i <= 120; i += 10) {
-                if(botAction.equals("Raise" + i)) {
-                    botRaise(i);
-                }
+            switchTurn();
+            if(userFirst) {
+                botSelectedCard = bot.botChooseCard(battleCard.getPoint(), bot.hand);
+                bot.betPoint = botSelectedCard.getPoint();
+                bot.hand.remove(botSelectedCard);
+                bot.sortByPoint();
+                botSelectedCardView.setImage(backCard);
+                renderCard(botSelectedCardView);
             }
+            botAction = bot.botChooseActionSecond(bot.getPointAction());
+            botGetAction(botAction);
+            removeBtn(undoBtn);
         }
-        else System.out.println("Not your turn");
+        else System.out.println("Can't raise");
+        updateLabel();
     }
 
     public void botRaise(int amount) {
+        if(bot.playerTurn) {
+            if(bot.betMoney + amount > user.betMoney) {
+                totalBet += amount;
+                bot.bet(amount);
+                switchTurn();
+                System.out.println("Bot " + botAction);
+                System.out.println(bot.betMoney);
+            }
+            else {
+                bot.betMoney += 50;
+            }
+        }
+    }
 
+    public void botGetAction(String action) {
+        if(botAction.equals("Call")) botCall();
+        for(int i = 0; i <= 120; i += 10) {
+            if(botAction.equals("Raise" + i)) {
+                botRaise(i);
+            }
+        }
+        if(botAction.equals("Fold")) botFold();
     }
 
     public void switchTurn() {
@@ -348,16 +401,17 @@ public class Controller implements Initializable {
         imgView.setVisible(false);
     }
 
-    /////////////////////////////////////BUTTON//////////////////////////////////////
-
-    public void betBtn() {
-        if(user.playerTurn) {
-            totalBet += betMoneySelected;
-            betMoneySelected = 0;
-        }
-//      updateMoney();
-        removeBtn(betBtn);
+    public void showAllCardBattle() {
+        botSelectedCardView.setImage(botSelectedCard.getImage());
+        selectedCardView.setImage(selectedCard);
     }
+
+    public void removeAllCardBattle() {
+        botSelectedCardView.setVisible(false);
+        selectedCardView.setVisible(false);
+        battleCardView.setVisible(false);
+    }
+    /////////////////////////////////////BUTTON//////////////////////////////////////
 
     public void pressCloseButton() {
         Stage window = (Stage) closeButton.getScene().getWindow();
@@ -372,10 +426,9 @@ public class Controller implements Initializable {
     public void selectBetBtn(ActionEvent e) {
         String id = ((Button) e.getSource()).getId();
         if (user.playerTurn) {
-            user.bet(getAmountBetFromBtn(id));
             betMoneySelected += getAmountBetFromBtn(id);
-//            updateMoney();
-            System.out.println(user.getBetMoney());
+            updateLabel();
+            System.out.println(betMoneySelected);
         } else System.out.println("Not your turn");
     }
 
@@ -395,7 +448,7 @@ public class Controller implements Initializable {
             String id = ((Button) e.getSource()).getId();
             indexSelectedCard = getObjectFromBtn(id);
             user.setBetPoint(getValueFromCard(id));
-            System.out.println(getValueFromCard(id));
+            //System.out.println(getValueFromCard(id));
             selectedCard = getImageFromCard(id);
             selectedCardView.setImage(backCard);
             renderCard(selectedCardView);
@@ -424,15 +477,14 @@ public class Controller implements Initializable {
         } else System.out.println("No card on battle");
     }
 
-    public void nextBtn() {
-        switchTurn();
-        //Bot place bet here.
-        switchTurn();
+    public void updateLabel() {
+        userMoney.setText(String.valueOf(user.money));
+        botMoney.setText(String.valueOf(bot.money));
+        userBetMoney.setText(String.valueOf(user.betMoney));
+        botBetMoney.setText(String.valueOf(bot.betMoney));
+        userBattlePt.setText(String.valueOf(user.getScore()));
+        botBattlePt.setText(String.valueOf(bot.getScore()));
+        betMoney.setText(String.valueOf(betMoneySelected));
+        totalBetLabel.setText(String.valueOf(totalBet));
     }
-
-//    public void updateMoney() {
-//        userMoney.setText("Money : " + user.money);
-//        botMoney.setText("Money : " + bot.money);
-//        totalBetLabel.setText("TOTALBET : " + totalBet);
-//    }
 }
