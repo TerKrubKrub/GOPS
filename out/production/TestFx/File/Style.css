@@ -140,13 +140,11 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
-    -fx-delay: 0.2s;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
 }
 
 #select0:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -10px;
 }
 
 #select1 {
@@ -154,13 +152,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -30px;
 }
 
 #select1:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -40px;
+    -fx-translate-x: -45px;
 }
 
 #select2 {
@@ -168,13 +166,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -60px;
 }
 
 #select2:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -70px;
+    -fx-translate-x: -75px;
 }
 
 #select3 {
@@ -182,13 +180,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -90px;
 }
 
 #select3:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -100px;
+    -fx-translate-x: -105px;
 }
 
 #select4 {
@@ -196,13 +194,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -120px;
 }
 
 #select4:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -130px;
+    -fx-translate-x: -135px;
 }
 
 #select5 {
@@ -210,13 +208,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -150px;
 }
 
 #select5:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -145px;
+    -fx-translate-x: -165px;
 }
 
 #select6 {
@@ -224,13 +222,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -180px;
 }
 
 #select6:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -175px;
+    -fx-translate-x: -195px;
 }
 
 #select7 {
@@ -238,13 +236,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -210px;
 }
 
 #select7:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -210px;
+    -fx-translate-x: -225px;
 }
 
 #select8 {
@@ -252,13 +250,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -240px;
 }
 
 #select8:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -245px;
+    -fx-translate-x: -255px;
 }
 
 #select9 {
@@ -266,13 +264,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -270px;
 }
 
 #select9:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -275px;
+    -fx-translate-x: -285px;
 }
 
 #select10 {
@@ -280,13 +278,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -300px;
 }
 
 #select10:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -290px;
+    -fx-translate-x: -315px;
 }
 
 #select11 {
@@ -294,13 +292,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -330px;
 }
 
 #select11:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -320px;
+    -fx-translate-x: -345px;
 }
 
 #select12 {
@@ -308,13 +306,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -360px;
 }
 
 #select12:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -350px;
+    -fx-translate-x: -375px;
 }
 
 #select13 {
@@ -322,13 +320,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -390px;
 }
 
 #select13:hover {
     -fx-translate-y: -60px;
-    -fx-translate-x: -380px;
+    -fx-translate-x: -405px;
 }
 
 #select14 {
@@ -336,13 +334,13 @@
     -fx-position: relative;
     -fx-flex-direction: column;
     -fx-background-radius: 3;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 8, 0.2, -8, 2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.2, -8, 2);
     -fx-translate-x: -420px;
 }
 
 #select14:hover {
-    -fx-translate-y: -50px;
-    -fx-translate-x: -410px;
+    -fx-translate-y: -60px;
+    -fx-translate-x: -420px;
 }
 
 #bet10 {
@@ -374,23 +372,6 @@
     -fx-background-insets: 6 0 0 0, 6 0 3 0, 6 0 5 0, 6 0 7 0;
 }
 
-#battleBtn {
-    -fx-padding: 8 15 15 15;
-    -fx-background-insets: 0, 0 0 4 0, 0 0 6 0, 0 0 8 0;
-    -fx-background-radius: 20;
-    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
-}
-
-#battleBtn:hover {
--fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
-}
-
-#battleBtn:pressed {
-    -fx-padding: 10 15 13 15;
-    -fx-background-insets: 6 0 0 0, 6 0 3 0, 6 0 5 0, 6 0 7 0;
-}
-
 #undoBtn {
     -fx-padding: 8 15 15 15;
     -fx-background-insets: 0, 0 0 4 0, 0 0 6 0, 0 0 8 0;
@@ -398,6 +379,7 @@
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
 }
+
 #undoBtn:hover {
     -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
 }
@@ -405,4 +387,65 @@
 #undoBtn:pressed {
     -fx-padding: 10 15 13 15;
     -fx-background-insets: 6 0 0 0, 6 0 3 0, 6 0 5 0, 6 0 7 0;
+}
+
+#foldBtn {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0, 0 0 4 0, 0 0 6 0, 0 0 8 0;
+    -fx-background-radius: 20;
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
+}
+
+#foldBtn:hover {
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+}
+
+#foldBtn:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 6 0 0 0, 6 0 3 0, 6 0 5 0, 6 0 7 0;
+}
+
+#raiseBtn {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0, 0 0 4 0, 0 0 6 0, 0 0 8 0;
+    -fx-background-radius: 20;
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
+}
+
+#raiseBtn:hover {
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+}
+
+#raiseBtn:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 6 0 0 0, 6 0 3 0, 6 0 5 0, 6 0 7 0;
+}
+
+#callBtn {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0, 0 0 4 0, 0 0 6 0, 0 0 8 0;
+    -fx-background-radius: 20;
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 4, 0, 0, 1);
+}
+
+#callBtn:hover {
+    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a38113 0%, #907912 100%), #9d6d24, #d8c03a, radial-gradient(center 50% 50%, radius 100%, #d9c13a, #d8c03b);
+}
+
+#callBtn:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 6 0 0 0, 6 0 3 0, 6 0 5 0, 6 0 7 0;
+}
+
+#addBetBtn {
+    -fx-background-radius: 20;
+    -fx-background-color: radial-gradient(center 50% -20%, radius 200%, #ffffff 45%, #a2a59e 50%);
+}
+
+#reduceBetBtn {
+    -fx-background-radius: 20;
+    -fx-background-color: radial-gradient(center 50% -20%, radius 200%, #333333 45%, #000000 50%);
 }

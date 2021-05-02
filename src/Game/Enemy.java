@@ -1,8 +1,6 @@
 package Game;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 
 public class Enemy extends Player{
 
@@ -22,12 +20,12 @@ public class Enemy extends Player{
 
     }
 
-    public int botChooseCard(int pointCentral,ArrayList<Card> botHand) {
-        for(int a = 0; a<botHand.size(); a++){
-            System.out.print(botHand.get(a).getPoint()+" ");
-        }
+    public Card botChooseCard(int pointCentral, ArrayList<Card> botHand) {
+//        for(int a = 0; a<botHand.size(); a++){
+//            System.out.print(botHand.get(a).getPoint()+" ");
+//        }
         pointChooseCard=0;
-        int indexFordelete=0;
+        int indexForDelete=0;
         botHand.get(0).getPoint();
 
         //point 1-5
@@ -37,19 +35,19 @@ public class Enemy extends Player{
             if(random==0){
                 pointChooseCard=botHand.get(0).getPoint();
                 pointAction=10;
-                indexFordelete=0;
+                indexForDelete=0;
             }
 
             else if(random==1){
                 if(botHand.size()-1>2){
                     pointChooseCard=botHand.get(1).getPoint();
                     pointAction=11;
-                    indexFordelete=1;
+                    indexForDelete=1;
                 }
 
                 else{
                     pointChooseCard=botHand.get(0).getPoint();
-                    indexFordelete=0;
+                    indexForDelete=0;
                     pointAction=10;
                 }
 
@@ -58,13 +56,13 @@ public class Enemy extends Player{
             else if(random==2){
                 if(botHand.size()-1>3){
                     pointChooseCard=botHand.get(2).getPoint();
-                    indexFordelete=2;
+                    indexForDelete=2;
                     pointAction=12;
                 }
 
                 else {
                     pointChooseCard = botHand.get(0).getPoint();
-                    indexFordelete = 0;
+                    indexForDelete = 0;
                     pointAction=10;
                 }
             }
@@ -72,12 +70,12 @@ public class Enemy extends Player{
             else if(random==3){
                 if(botHand.size()-1>4) {
                     pointChooseCard = botHand.get(3).getPoint();
-                    indexFordelete = 3;
+                    indexForDelete = 3;
                     pointAction=13;
                 }
                 else {
                     pointChooseCard = botHand.get(0).getPoint();
-                    indexFordelete=0;
+                    indexForDelete=0;
                     pointAction=10;
                 }
             }
@@ -90,13 +88,13 @@ public class Enemy extends Player{
             if(random==0){
                 if(botHand.size()-1>7){
                     pointChooseCard=botHand.get(botHand.size()-1-5).getPoint();
-                    indexFordelete=(int)(botHand.size()-1-5);
+                    indexForDelete=(int)(botHand.size()-1-5);
                     pointAction=20;
                 }
 
                 else{
                     pointChooseCard=botHand.get((int)((botHand.size()-1)/2)).getPoint();
-                    indexFordelete=((int)((botHand.size()-1)/2));
+                    indexForDelete=((int)((botHand.size()-1)/2));
                     pointAction=22;
                 }
 
@@ -105,12 +103,12 @@ public class Enemy extends Player{
             else if(random==1){
                 if(botHand.size()-1>6) {
                     pointChooseCard = botHand.get(botHand.size()-1 - 4).getPoint();
-                    indexFordelete = botHand.size()-1 - 4;
+                    indexForDelete = botHand.size()-1 - 4;
                     pointAction=21;
                 }
                 else{
                     pointChooseCard = botHand.get((int) ((botHand.size()-1) / 2)).getPoint();
-                    indexFordelete = (int) ((botHand.size()-1) / 2);
+                    indexForDelete = (int) ((botHand.size()-1) / 2);
                     pointAction=22;
                 }
             }
@@ -118,12 +116,12 @@ public class Enemy extends Player{
             else if(random==2){
                 if(botHand.size()-1>5) {
                     pointChooseCard = botHand.get(botHand.size()-1 - 3).getPoint();
-                    indexFordelete = (int) (botHand.size()-1 - 3);
+                    indexForDelete = (int) (botHand.size()-1 - 3);
                     pointAction=22;
                 }
                 else {
                     pointChooseCard = botHand.get((int) ((botHand.size()-1) / 2)).getPoint();
-                    indexFordelete = (int) ((botHand.size()-1) / 2);
+                    indexForDelete = (int) ((botHand.size()-1) / 2);
                     pointAction=22;
                 }
             }
@@ -136,12 +134,12 @@ public class Enemy extends Player{
             if(random==0){
                 if(botHand.size()-1>4) {
                     pointChooseCard = botHand.get(botHand.size()-1 - 2).getPoint();
-                    indexFordelete = botHand.size()-1 - 2;
+                    indexForDelete = botHand.size()-1 - 2;
                     pointAction=30;
                 }
                 else {
                     pointChooseCard = botHand.get((int) botHand.size()-1).getPoint();
-                    indexFordelete = (int) (botHand.size()-1);
+                    indexForDelete = (int) (botHand.size()-1);
                     pointAction=32;
                 }
 
@@ -150,36 +148,39 @@ public class Enemy extends Player{
             else if(random==1){
                 if(botHand.size()-1>3) {
                     pointChooseCard = botHand.get(botHand.size()-1 - 1).getPoint();
-                    indexFordelete = botHand.size()-1 - 1;
+                    indexForDelete = botHand.size()-1 - 1;
                     pointAction=31;
                 }
                 else {
                     pointChooseCard = botHand.get((int) botHand.size()-1).getPoint();
-                    indexFordelete = (int) botHand.size()-1;
+                    indexForDelete = (int) botHand.size()-1;
                     pointAction=32;
                 }
             }
 
             else if(random==2){
                 pointChooseCard=botHand.get((int)botHand.size()-1).getPoint();
-                indexFordelete = (int)botHand.size()-1;
+                indexForDelete = (int)botHand.size()-1;
                 pointAction=32;
             }
         }
         System.out.println("Bot Choose: "+ pointChooseCard);
         //System.out.println("Bot size"+(botHand.size()-1));
-        botHand.remove(indexFordelete);
+        botHand.remove(indexForDelete);
         botChooseActionFirst(pointAction);
+        for(Card i : botHand) {
+            if(i.getPoint() == pointAction) {
+                return i;
+            }
+        }
 //            System.out.println();
 //        for(int z=0;z<botHand.size();z++){
 //            botHand.removeIf(card -> botHand.get(z).getValue()==pointChooseCard);
 //        }
 
-        return pointChooseCard;
-
+        return null;
     }
-
-
+    
     @Override
     public String toString() {
         return "Enemy{" +
@@ -199,7 +200,7 @@ public class Enemy extends Player{
                 actionF = "Call";
             }
             else if(randomAction>=81 && randomAction <=100){
-                actionF = "Bet";
+                actionF = "Raise10";
                 amountBet = 10;
             }
 
@@ -213,7 +214,7 @@ public class Enemy extends Player{
                 actionF = "Call";
             }
             else if(randomAction>=81 && randomAction <=100){
-                actionF = "Bet";
+                actionF = "Raise10";
                 amountBet = 10;
             }
         }
@@ -225,7 +226,7 @@ public class Enemy extends Player{
                 actionF = "Call";
             }
             else if(randomAction>=76 && randomAction <=100){
-                actionF = "Bet";
+                actionF = "Raise20";
                 amountBet = 20;
             }
         }
@@ -237,7 +238,7 @@ public class Enemy extends Player{
                 actionF = "Call";
             }
             else if(randomAction>=76 && randomAction <=100){
-                actionF = "Bet";
+                actionF = "Raise20";
                 amountBet = 20;
             }
         }
@@ -250,7 +251,7 @@ public class Enemy extends Player{
                 actionF = "Call";
             }
             else if(randomAction>=71 && randomAction <=100){
-                actionF = "Bet";
+                actionF = "Raise30";
                 amountBet = 30;
             }
         }
@@ -263,7 +264,7 @@ public class Enemy extends Player{
                 actionF = "Call";
             }
             else if(randomAction>=61 && randomAction <=100){
-                actionF = "Bet";
+                actionF = "Raise40";
                 amountBet = 40;
             }
         }
@@ -276,7 +277,7 @@ public class Enemy extends Player{
                 actionF = "Call";
             }
             else if(randomAction>=51 && randomAction <=100){
-                actionF = "Bet";
+                actionF = "Raise50";
                 amountBet = 50;
             }
         }
@@ -289,7 +290,7 @@ public class Enemy extends Player{
                 actionF = "Call";
             }
             else if(randomAction>=31 && randomAction <=100){
-                actionF = "Bet";
+                actionF = "Raise100";
                 amountBet = 100;
             }
         }
@@ -302,7 +303,7 @@ public class Enemy extends Player{
                 actionF = "Call";
             }
             else if(randomAction>=26 && randomAction <=100){
-                actionF = "Bet";
+                actionF = "Raise120";
                 amountBet = 120;
             }
         }
@@ -315,7 +316,7 @@ public class Enemy extends Player{
                 actionF = "Call";
             }
             else if(randomAction>=21 && randomAction <=100){
-                actionF = "Bet";
+                actionF = "Raise120";
                 amountBet = 120;
             }
         }
@@ -464,36 +465,6 @@ public class Enemy extends Player{
     public void bet(int amount){
         this.betMoney += amount;
         this.money -= amount;
-    }
-
-    public void call(){
-        if(this.playerTurn)
-        {
-
-        }
-    }
-
-    public void fold(){
-        if(this.playerTurn)
-        {
-
-        }
-    }
-
-    public void checkAction(String action){
-
-        if(action.equals("Bet")){
-            bet(amountBet);
-        }
-
-        else if(action.equals("Call")){
-            call();
-        }
-
-        else if(action.equals("Fold")){
-            fold();
-        }
-
     }
 
     public int getAmountBet() {

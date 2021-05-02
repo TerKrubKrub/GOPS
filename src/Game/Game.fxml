@@ -2,11 +2,14 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.Controller">
@@ -15,11 +18,11 @@
             <Image url="@../Resource/Background/game.png" />
         </image>
     </ImageView>
-    <Button fx:id="undoBtn" alignment="CENTER" contentDisplay="TOP" layoutX="459.0" layoutY="549.0" mnemonicParsing="false" onAction="#undoBtn" prefHeight="38.0" prefWidth="81.0" stylesheets="@../File/Style.css" text="Reselect" textFill="#4b1919">
+    <Button fx:id="undoBtn" alignment="CENTER" contentDisplay="TOP" layoutX="459.0" layoutY="483.0" mnemonicParsing="false" onAction="#undoBtn" prefHeight="38.0" prefWidth="81.0" stylesheets="@../File/Style.css" text="Reselect" textFill="#4b1919">
         <font>
             <Font name="Arial Rounded MT Bold" size="12.0" />
         </font></Button>
-    <HBox layoutX="55.0" layoutY="627.0" prefHeight="118.0" prefWidth="387.0">
+    <HBox layoutX="50.0" layoutY="641.0" prefHeight="118.0" prefWidth="387.0">
         <Button fx:id="select0" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectCardBtn" prefHeight="100.0" prefWidth="80.0" stylesheets="@../File/Style.css">
             <graphic>
                 <ImageView fx:id="card0" fitHeight="120.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
@@ -141,82 +144,125 @@
             </padding>
         </Button>
     </HBox>
-    <ImageView fx:id="cardBot0" fitHeight="120.0" fitWidth="88.0" layoutX="246.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot0" fitHeight="120.0" fitWidth="88.0" layoutX="250.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot1" fitHeight="120.0" fitWidth="88.0" layoutX="276.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot1" fitHeight="120.0" fitWidth="88.0" layoutX="280.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot2" fitHeight="120.0" fitWidth="88.0" layoutX="306.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot2" fitHeight="120.0" fitWidth="88.0" layoutX="310.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot3" fitHeight="120.0" fitWidth="88.0" layoutX="336.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot3" fitHeight="120.0" fitWidth="88.0" layoutX="340.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot4" fitHeight="120.0" fitWidth="88.0" layoutX="366.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot4" fitHeight="120.0" fitWidth="88.0" layoutX="370.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot5" fitHeight="120.0" fitWidth="88.0" layoutX="396.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot5" fitHeight="120.0" fitWidth="88.0" layoutX="400.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot6" fitHeight="120.0" fitWidth="88.0" layoutX="426.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot6" fitHeight="120.0" fitWidth="88.0" layoutX="430.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot7" fitHeight="120.0" fitWidth="88.0" layoutX="456.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot7" fitHeight="120.0" fitWidth="88.0" layoutX="460.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot9" fitHeight="120.0" fitWidth="88.0" layoutX="486.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot9" fitHeight="120.0" fitWidth="88.0" layoutX="490.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot8" fitHeight="120.0" fitWidth="88.0" layoutX="516.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot8" fitHeight="120.0" fitWidth="88.0" layoutX="520.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot10" fitHeight="120.0" fitWidth="88.0" layoutX="546.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot10" fitHeight="120.0" fitWidth="88.0" layoutX="550.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot11" fitHeight="120.0" fitWidth="88.0" layoutX="576.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot11" fitHeight="120.0" fitWidth="88.0" layoutX="580.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot12" fitHeight="120.0" fitWidth="88.0" layoutX="606.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot12" fitHeight="120.0" fitWidth="88.0" layoutX="610.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot13" fitHeight="120.0" fitWidth="88.0" layoutX="636.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot13" fitHeight="120.0" fitWidth="88.0" layoutX="640.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <ImageView fx:id="cardBot14" fitHeight="120.0" fitWidth="88.0" layoutX="666.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="cardBot14" fitHeight="120.0" fitWidth="88.0" layoutX="670.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
         <effect>
             <DropShadow height="25.0" offsetX="-5.0" radius="12.0" width="25.0" />
         </effect>
     </ImageView>
-    <HBox layoutX="600.0" layoutY="416.0" prefHeight="38.0" prefWidth="152.0" spacing="10.0">
+    <ImageView fx:id="battleCardView" fitHeight="90.0" fitWidth="66.0" layoutX="290.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="20.0" offsetY="4.0" radius="9.5" width="20.0" />
+        </effect>
+    </ImageView>
+    <Button fx:id="drawBtn" alignment="CENTER" contentDisplay="TOP" layoutX="247.0" layoutY="387.0" mnemonicParsing="false" onAction="#draw" prefHeight="32.0" prefWidth="66.0" stylesheets="@../File/Style.css" text="Draw" textFill="#4b1919">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+        </font></Button>
+    <Button fx:id="minimizeButton" layoutX="1202.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressMinimizeButton" prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css" AnchorPane.rightAnchor="62.4" AnchorPane.topAnchor="16.0" />
+    <Button fx:id="closeButton" layoutX="1152.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressCloseButton" prefHeight="25.0" prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css" AnchorPane.rightAnchor="22.4" AnchorPane.topAnchor="16.0" />
+    <ImageView fx:id="selectedCardView" fitHeight="90.0" fitWidth="66.0" layoutX="467.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="20.0" offsetY="4.0" radius="9.5" width="20.0" />
+        </effect>
+    </ImageView>
+    <ImageView fitHeight="90.0" fitWidth="66.0" layoutX="210.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../Resource/Card/back.png" />
+        </image>
+        <effect>
+            <DropShadow height="20.0" offsetY="4.0" radius="9.5" width="20.0" />
+        </effect>
+    </ImageView>
+    <ImageView fx:id="botSelectedCardView" fitHeight="90.0" fitWidth="66.0" layoutX="467.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+        <effect>
+            <DropShadow height="20.0" offsetY="4.0" radius="9.5" width="20.0" />
+        </effect>
+    </ImageView>
+    <VBox alignment="CENTER" layoutX="597.0" layoutY="387.0" prefHeight="60.0" prefWidth="25.0" spacing="5.0">
+        <children>
+            <Button fx:id="addBetBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" stylesheets="@../File/Style.css" text="+">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="reduceBetBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" stylesheets="@../File/Style.css" text="-" textFill="WHITE">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Button>
+        </children>
+    </VBox>
+    <HBox alignment="CENTER" layoutX="636.0" layoutY="390.0" prefHeight="54.0" prefWidth="159.0" spacing="10.0">
         <children>
             <Button fx:id="bet10" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#selectBetBtn" prefHeight="32.0" prefWidth="169.0" stylesheets="@../File/Style.css">
                 <graphic>
@@ -262,32 +308,149 @@
             </Button>
         </children>
     </HBox>
-    <ImageView fx:id="battleCardView" fitHeight="90.0" fitWidth="66.0" layoutX="309.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
-        <effect>
-            <DropShadow height="20.0" offsetY="4.0" radius="9.5" width="20.0" />
-        </effect>
-    </ImageView>
-    <Button fx:id="drawBtn" alignment="CENTER" contentDisplay="TOP" layoutX="228.0" layoutY="419.0" mnemonicParsing="false" onAction="#draw" prefHeight="32.0" prefWidth="66.0" stylesheets="@../File/Style.css" text="Draw" textFill="#4b1919">
-        <font>
-            <Font name="Arial Rounded MT Bold" size="12.0" />
-        </font></Button>
-    <Button fx:id="battleBtn" alignment="CENTER" contentDisplay="TOP" layoutX="309.0" layoutY="419.0" mnemonicParsing="false" onAction="#draw" prefHeight="32.0" prefWidth="66.0" stylesheets="@../File/Style.css" text="Battle" textFill="#4b1919">
-        <font>
-            <Font name="Arial Rounded MT Bold" size="12.0" />
-        </font></Button>
-    <Button fx:id="minimizeButton" layoutX="1202.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressMinimizeButton" prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css" AnchorPane.rightAnchor="62.4" AnchorPane.topAnchor="16.0" />
-    <Button fx:id="closeButton" layoutX="1152.0" layoutY="16.0" mnemonicParsing="false" onAction="#pressCloseButton" prefHeight="25.0" prefWidth="25.0" rotate="15.0" stylesheets="@../File/Style.css" AnchorPane.rightAnchor="22.4" AnchorPane.topAnchor="16.0" />
-    <ImageView fx:id="selectedCardView" fitHeight="90.0" fitWidth="66.0" layoutX="467.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
-        <effect>
-            <DropShadow height="20.0" offsetY="4.0" radius="9.5" width="20.0" />
-        </effect>
-    </ImageView>
-    <ImageView fitHeight="90.0" fitWidth="66.0" layoutX="229.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
-        <image>
-            <Image url="@../Resource/Card/back.png" />
-        </image>
-        <effect>
-            <DropShadow height="20.0" offsetY="4.0" radius="9.5" width="20.0" />
-        </effect>
-    </ImageView>
+    <HBox layoutX="598.0" layoutY="331.0" prefHeight="38.0" prefWidth="200.0" spacing="10.0">
+        <children>
+            <Button fx:id="raiseBtn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#raise" prefHeight="32.0" prefWidth="65.0" stylesheets="@../File/Style.css" text="Raise" textFill="#4b1919">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="callBtn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#call" prefHeight="32.0" prefWidth="55.0" stylesheets="@../File/Style.css" text="Call" textFill="#4b1919">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="foldBtn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#fold" prefHeight="31.0" prefWidth="60.0" stylesheets="@../File/Style.css" text="Fold" textFill="#4b1919">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Button>
+        </children>
+    </HBox>
+    <VBox layoutX="119.0" layoutY="539.0" prefHeight="53.0" prefWidth="101.0">
+        <children>
+            <Label fx:id="battlePt" text="10" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label text="Your Point:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <VBox layoutX="119.0" layoutY="101.0" prefHeight="53.0" prefWidth="101.0">
+        <children>
+            <Label text="Bot Point:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="botBattlePt" text="10" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <VBox alignment="CENTER_RIGHT" layoutX="670.0" layoutY="234.0" prefHeight="74.0" prefWidth="116.0">
+        <children>
+            <Label text="Turn Value:" underline="true">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                </font>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0">
+                        <color>
+                            <Color red="0.5157894492149353" green="0.473762184381485" blue="0.473762184381485" />
+                        </color>
+                    </DropShadow>
+                </effect>
+            </Label>
+            <Label fx:id="totalBetLabel" text="100">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="36.0" />
+                </font>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0">
+                        <color>
+                            <Color red="0.5157894492149353" green="0.473762184381485" blue="0.473762184381485" />
+                        </color>
+                    </DropShadow>
+                </effect>
+            </Label>
+        </children>
+    </VBox>
+    <VBox alignment="TOP_RIGHT" layoutX="758.0" layoutY="539.0" prefHeight="54.0" prefWidth="126.0">
+        <children>
+            <Label fx:id="userMoney" text="100" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label text="Your Total Money:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <VBox alignment="TOP_RIGHT" layoutX="750.0" layoutY="101.0" prefHeight="54.0" prefWidth="134.0">
+        <children>
+            <Label text="Bot Total Money:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="userMoney1" text="100" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <VBox alignment="CENTER_LEFT" layoutX="243.0" layoutY="199.0" prefHeight="54.0" prefWidth="134.0">
+        <children>
+            <Label text="Bot Turn Money:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label text="100" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <VBox alignment="CENTER_LEFT" layoutX="237.0" layoutY="447.0" prefHeight="54.0" prefWidth="145.0">
+        <children>
+            <Label text="100" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label text="Your Turn Money:" textFill="#e5e1ea">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                </font>
+            </Label>
+        </children>
+    </VBox>
+    <HBox layoutX="11.0" layoutY="11.0" prefHeight="54.0" prefWidth="242.0">
+        <children>
+            <Label text="Score: " textFill="WHITE">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="30.0" />
+                </font>
+            </Label>
+            <Label fx:id="scoreLabel" text="100" textFill="WHITE">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="30.0" />
+                </font>
+            </Label>
+        </children>
+    </HBox>
 </AnchorPane>
