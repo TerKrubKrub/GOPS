@@ -103,6 +103,15 @@ public class Controller implements Initializable {
         return 0;
     }
 
+    public int getObjectFromCard(Card card, ArrayList<Card> cards) {
+        for (Card i : cards) {
+            if(card == i){
+                return cards.indexOf(i);
+            }
+        }
+        return -1;
+    }
+
     public void handOutCards() throws IllegalAccessException {
         for (int i = 0; i < Card.Value.values().length - 1; i++) {
             user.hand.add(deck.drawCard());
@@ -239,6 +248,7 @@ public class Controller implements Initializable {
                 else {
                     botSelectedCard = bot.botChooseCard(battleCard.getPoint(), bot.hand);
                     bot.betPoint = botSelectedCard.getPoint();
+                    removeCard(imgBotList.get(getObjectFromCard(botSelectedCard, bot.hand)));
                     bot.hand.remove(botSelectedCard);
                     bot.sortByPoint();
                     botSelectedCardView.setImage(backCard);
@@ -270,8 +280,8 @@ public class Controller implements Initializable {
     }
 
     public void draw() throws IllegalAccessException {
-        battleReset();
         if(drawable) {
+            battleReset();
             if(user.playerTurn) {
                 battleCard = deck.drawCard();
                 System.out.println(battleCard.getPoint());
@@ -286,6 +296,7 @@ public class Controller implements Initializable {
                 battleCardView.setImage(battleCard.getImage());
                 botSelectedCard = bot.botChooseCard(battleCard.getPoint(), bot.hand);
                 bot.betPoint = botSelectedCard.getPoint();
+                removeCard(imgBotList.get(getObjectFromCard(botSelectedCard, bot.hand)));
                 bot.hand.remove(botSelectedCard);
                 bot.sortByPoint();
                 botSelectedCardView.setImage(backCard);
@@ -307,6 +318,7 @@ public class Controller implements Initializable {
             System.out.println("Bot Wins");
             switchTurn();
             removeBtn(undoBtn);
+            drawable = true;
         }
         else System.out.println("Not your turn");
         updateLabel();
@@ -319,6 +331,7 @@ public class Controller implements Initializable {
             System.out.println("User Wins");
             System.out.println("Bot " + botAction);
             switchTurn();
+            drawable = true;
         }
         else System.out.println("Not your turn");
         updateLabel();
@@ -329,10 +342,12 @@ public class Controller implements Initializable {
             user.bet(betMoneySelected);
             totalBet += betMoneySelected;
             betMoneySelected = 0;
+            updateLabel();
             switchTurn();
             if(userFirst) {
                 botSelectedCard = bot.botChooseCard(battleCard.getPoint(), bot.hand);
                 bot.betPoint = botSelectedCard.getPoint();
+                removeCard(imgBotList.get(getObjectFromCard(botSelectedCard, bot.hand)));
                 bot.hand.remove(botSelectedCard);
                 bot.sortByPoint();
                 botSelectedCardView.setImage(backCard);
@@ -343,7 +358,6 @@ public class Controller implements Initializable {
             removeBtn(undoBtn);
         }
         else System.out.println("Can't raise");
-        updateLabel();
     }
 
     public void botRaise(int amount) {
@@ -352,11 +366,12 @@ public class Controller implements Initializable {
                 totalBet += amount;
                 bot.bet(amount);
                 switchTurn();
+                updateLabel();
                 System.out.println("Bot " + botAction);
                 System.out.println(bot.betMoney);
             }
             else {
-                bot.betMoney += 50;
+                bot.bet(50);
             }
         }
     }
